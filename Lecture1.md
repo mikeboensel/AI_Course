@@ -1,5 +1,6 @@
+# "Where are we going?"
 - Too often things are taught academically to be 100% technically accurate
-    - Taught by people who are experts in the field. They want you to see the work they put in. They want you to appreciate their suffering.
+    - Taught by people who are experts in the field. 
     - I have a different approach. Get 90% of the meaning. Fill it in later. Explain it in a way that rather than saying "Goddam that guy is smart" its more like "Why didn't I get into engineering. A monkey could do this". 
         - There is OFC more to this than I'm initially discussing, but I think its hugely helpful to start from a place of "Oh, ok, I get what you're doing and where you're going" vs "I don't know any of those words. I'm not even sure what the point of this is, I'm drowing in terminology"
 
@@ -42,9 +43,14 @@
                 - Square (or arbitrary n) root
             - What about w/ a # < 1?
                 - Imaginary # (a half flip!)
-    - 
 
     - Ok, but that's leaving off some subjects
+        - Algebra
+            - Introduce the concept of an unknown value. Useful for solving things like word problems.
+            - Let's manipulate it to solve for unknowns
+            - We know how to setup an equation, let's expand that to a function
+            - Let's graph the function
+            
         - Trig - Triangle tricks
             - Why?
             - We've dealth with a single point (a #). Dealth with 2 points (slope, distance, etc.). Triangle is what you get when you have 3 points, actually turns out to be hugely useful.
@@ -53,15 +59,16 @@
                     - So that's why sin/cos show up everywhere in electrical engineering
         - Calc
             - We know how to do area and slope for simple stuff like lines
-                - What about wiggly lines?
+                - What about wiggly lines that go on forever?
                 - core concept, everything else is just cool tricks to get there (years of cool tricks)
 
 
-- No one wants to look dumb, and so we end up all talking past each other, minimizing learning
-    - Fortunately, I'm used to looking dumb... hence : Mr Big Brain's Super Duper AI Course
+# Course intro
+- No one wants to look dumb and so we end up all talking past each other, minimizing learning
+    - I think that's an impulse that we all need to make concious efforts to suppress... hence this series' title : Mr Big Brain's Super Duper AI Course
 
 
-- What is AI?
+# What is AI?
     - Nebulous term. Basically, "computer doing something useful". 
     - Spellcheck
         - Not particularly smart. 
@@ -71,7 +78,7 @@
         - Mentions of AI during investor conference calls
     - Umbrella term
         - Machine Learning is what has generated all the interesting progress, that's what we'll focus on
-            - "Learning from data examples"
+            - `Learning from data examples`
                 - Instructing a machine is hard. Humans are bad at considering a state space. May not even be able to describe (or know) how to find a solution.
                     - Bouncer example.
                         - Task: Don't allow anyone through the door unless they are of age.
@@ -87,8 +94,7 @@
                     - House pricing example. 
                         - Many examples. Pricing + features. Something discoverable.
 
-
-- Key ideas
+# Key ideas
     1. Neural Nets are f(x) approximators (that much is uncontroversial, but I'd go further and say they are "DISCOVERERS") and the world is full of functions
         - F(x) for pricing a house, picking an NBA draftee, writing a letter, even art
         - If a human can do it, I take that as a prior indicating that it is a task that can be solved algorithmically (may not be able to state what the algo is, but it exists and can be discovered)
@@ -104,6 +110,11 @@
             - Can be learned
             - Can be interpolated over
 
+
+
+
+
+# Misc
 Graph - need to keep in mind what this represents (infinite resolution). Reality is limited sampling, which may not be representative
 
 
