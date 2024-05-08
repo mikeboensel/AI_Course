@@ -1,0 +1,87 @@
+- Too often things are taught academically to be 100% technically accurate
+    - Taught by people who are experts in the field. They want you to see the work they put in. They want you to appreciate their suffering.
+    - I have a different approach. Get 90% of the meaning. Fill it in later. Explain it in a way that rather than saying "Goddam that guy is smart" its more like "Why didn't I get into engineering. A monkey could do this". 
+        - There is OFC more to this than I'm initially discussing, but I think its hugely helpful to start from a place of "Oh, ok, I get what you're doing and where you're going" vs "I don't know any of those words. I'm not even sure what the point of this is, I'm drowing in terminology"
+
+- Motivating example
+    - I'd argue a lot of the Math that we all learn through school is just about developing a numbering system and some basic operations around that.
+    - Pretty good student. Better at math than most as I ended up going into engineering, which means to me I can talk with authority to anyone other than mathematicians and physicists.
+        - Did not have good intuitions on any of this, just really good at applying mechanical processes that were drilled into me via worksheets/hw
+            - Competitive streak + gamifying
+    - Many of these concepts are bizarre! We forget how hard they were for us initially. Worth exploring.
+    - About 10 years ago I went back to kindergarten math -> Calc 2 using Khan Academy
+        - Seeing the whole picture (and knowing where we're going is hugely helpful, otherwise you're being led around by the nose)
+    - So let's work through most of what we spent 8+ years of schooling learning,  starting with a # line:
+        - <0-> 10 # line>
+        - Counting (ok, makes sense, I have fingers. Eventually I can imagine that there are even things beyond what I can enumerate on my fingers)
+            - A more general concept, a displacement from the origin (0)
+            - Eventual expansion to large #s (beyond what we've seen in front of us). Millions of blocks. Ok. 
+                - Then infinity
+        - Addition (Just expanding on counting)
+        - Subtraction (Removal from some quantity)
+            - What happens if we go beyond what we have?
+                - Negatives are weird. More so than we think.
+                    - Easier for us to reason about due to debt. We can understand oweing someone money. 
+                    - But none of us have ever seen a "negative thing"
+                        - All in relation to some state. A proton is denoted as "positive". What's the inverse of that? A "negative". It makes sense to use this terminology since the 2 cancel out +1/-1. But again, there's not such thing as a "negative thing". But, its a useful concept of moving to the left on the # line
+        - Is 1 the smallest unit of measure?
+            - Seems dumb, mostly because we've all absorbed the abstract concept, but you can make arguments about fractions also being in relation to something and not really existing.
+            - 1/2 Pizza - Abstract idea that there should be more there. There isn't. But there should be. Hence you have half.
+            - Most things if you take half, a quarter, a tenth, you just have junk. Possibly unrecognizable junk depending on how it was split.
+                - 1/10 of a car engine. Misc parts.
+        - Multiplication
+            - Like repeated addition
+            - Scaling a displacement
+            - What if we scaled by a # less than 1?
+                - Division!
+            - By a negative #?
+                - Flip along the axis
+        - Exponents
+            - Scaling even harder
+            - Doing this by a # < 1?
+                - Square (or arbitrary n) root
+            - What about w/ a # < 1?
+                - Imaginary # (a half flip!)
+    - 
+
+    - Ok, but that's leaving off some subjects
+        - Trig - Triangle tricks
+            - Why?
+            - We've dealth with a single point (a #). Dealth with 2 points (slope, distance, etc.). Triangle is what you get when you have 3 points, actually turns out to be hugely useful.
+            - Circular movement modeled as 3 points (origin, x-offset, y-offset)
+                - AC current (generators)
+                    - So that's why sin/cos show up everywhere in electrical engineering
+        - Calc
+            - We know how to do area and slope for simple stuff
+                - What about wiggly lines?
+
+
+- No one wants to look dumb, and so we end up all talking past each other, minimizing learning
+    - Fortunately, I'm used to looking dumb... hence : Mr Big Brain's Super Duper AI Course
+
+
+- What is AI?
+    - Nebulous term. Basically, "computer doing something useful". 
+    - Spellcheck
+        - Not particularly smart. 
+        - But at one time revolutionary.
+            - Brings up another 
+    - Marketing term
+        - Mentions of AI during investor conference calls
+    - Umbrella term
+        - Machine Learning is what has generated all the interesting progress, that's what we'll focus on
+            - "Learning from data examples"
+                - Instructing a machine is hard. Humans are bad at considering a state space. May not even be able to describe (or know) how to find a solution.
+                    - Bouncer example.
+                        - Task: Don't allow anyone through the door unless they are of age.
+                            - Sounds simple (Gate access to one entry point, )
+                            - What does that mean? People should be 18+ years old
+                            - Which IDs? Other states? Passports? Foreign IDs? Driver's licences only?
+                            - Where to find the DOB information?
+                            - Someone shows up with a 2 digit year "12" are they 112? Or 12?
+                            - Stop people from entering the door w/o checking ID
+                                - What about the window?
+                            - Tremendous amount of prior knowledge about the world must either be present, or accounted for by programmer. 
+                            - Many failure modalities
+                    - House pricing example. 
+                        - Many examples. Pricing + features. Something discoverable.
