@@ -52,8 +52,9 @@
                 - AC current (generators)
                     - So that's why sin/cos show up everywhere in electrical engineering
         - Calc
-            - We know how to do area and slope for simple stuff
+            - We know how to do area and slope for simple stuff like lines
                 - What about wiggly lines?
+                - core concept, everything else is just cool tricks to get there (years of cool tricks)
 
 
 - No one wants to look dumb, and so we end up all talking past each other, minimizing learning
@@ -85,3 +86,27 @@
                             - Many failure modalities
                     - House pricing example. 
                         - Many examples. Pricing + features. Something discoverable.
+
+
+- Key ideas
+    1. Neural Nets are f(x) approximators (that much is uncontroversial, but I'd go further and say they are "DISCOVERERS") and the world is full of functions
+        - F(x) for pricing a house, picking an NBA draftee, writing a letter, even art
+        - If a human can do it, I take that as a prior indicating that it is a task that can be solved algorithmically (may not be able to state what the algo is, but it exists and can be discovered)
+            - Somewhat philosophical. Some people believe in some greater, undefined quantity ("spirit/essence"). I don't. I think we're all bounded by the laws of nature and math. I can't prove it, but I've yet to see anyone prove the other case either. So that's my bias. You may not believe everything is this way, but I think we can agree most things are.
+    2. There's a deep underlying structure to the universe (latent spaces/embeddings, model merging, generative AI ability to interpolate)
+        - Even things that might not seem interolatable
+            - Ex: human faces "ThisPersonDoesNotExist.com"
+    3. Once you've learned something its easier to learn other similar things
+        - Intuitively makes sense to us. Magnus Carlsen - Chess. If I told you he was also really good at checkers, backgammon, etc. You'd be pretty accepting of it.
+        - `Transfer learning` -- makes sense because learning just means discovering some underlying structure about the universe. If you know some, easier to acquire others (vs being random unitialized)
+    So...
+        - There's an underlying structure to the universe that
+            - Can be learned
+            - Can be interpolated over
+
+Graph - need to keep in mind what this represents (infinite resolution). Reality is limited sampling, which may not be representative
+
+
+Over time some things `Drift`
+- Gravity - pretty constant
+- Housing prices - phase shift from 2007-> 2009
