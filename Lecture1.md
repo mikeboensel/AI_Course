@@ -69,30 +69,32 @@
 
 
 # What is AI?
-    - Nebulous term. Basically, "computer doing something useful". 
-    - Spellcheck
-        - Not particularly smart. 
-        - But at one time revolutionary.
-            - Brings up another 
-    - Marketing term
-        - Mentions of AI during investor conference calls
-    - Umbrella term
-        - Machine Learning is what has generated all the interesting progress, that's what we'll focus on
-            - `Learning from data examples`
-                - Instructing a machine is hard. Humans are bad at considering a state space. May not even be able to describe (or know) how to find a solution.
-                    - Bouncer example.
-                        - Task: Don't allow anyone through the door unless they are of age.
-                            - Sounds simple (Gate access to one entry point, )
-                            - What does that mean? People should be 18+ years old
-                            - Which IDs? Other states? Passports? Foreign IDs? Driver's licences only?
-                            - Where to find the DOB information?
-                            - Someone shows up with a 2 digit year "12" are they 112? Or 12?
-                            - Stop people from entering the door w/o checking ID
-                                - What about the window?
-                            - Tremendous amount of prior knowledge about the world must either be present, or accounted for by programmer. 
-                            - Many failure modalities
-                    - House pricing example. 
-                        - Many examples. Pricing + features. Something discoverable.
+- Nebulous term. Basically, "computer doing something useful". 
+- Spellcheck
+    - Not particularly smart. 
+    - But at one time revolutionary.
+        - Brings up another 
+- Marketing term
+    - Mentions of AI during investor conference calls
+    - <img src="./imgs/earning_call_ai_mentions.png" height="300px">
+- Umbrella term
+    - <img src="./imgs/venn_diagram_ai.JPG" height="300px">
+    - Machine Learning is what has generated all the interesting progress, that's what we'll focus on
+        - `Learning from data examples`
+            - Instructing a machine is hard. Humans are bad at considering a state space. May not even be able to describe (or know) how to find a solution.
+                - Bouncer example.
+                    - Task: Don't allow anyone through the door unless they are of age.
+                        - Sounds simple (Gate access to one entry point, )
+                        - What does that mean? People should be 18+ years old
+                        - Which IDs? Other states? Passports? Foreign IDs? Driver's licences only?
+                        - Where to find the DOB information?
+                        - Someone shows up with a 2 digit year "12" are they 112? Or 12?
+                        - Stop people from entering the door w/o checking ID
+                            - What about the window?
+                        - Tremendous amount of prior knowledge about the world must either be present, or accounted for by programmer. 
+                        - Many failure modalities
+                - House pricing example. 
+                    - Many examples. Pricing + features. Something discoverable.
 
 # Key ideas
     1. Neural Nets are f(x) approximators (that much is uncontroversial, but I'd go further and say they are "DISCOVERERS") and the world is full of functions
@@ -110,6 +112,43 @@
             - Can be learned
             - Can be interpolated over
 
+
+# Sequence to Sequence
+- RNNs
+    - Going to look very impressive, but really a simple idea
+        - Just a NN w/ one more group of inputs coming in (hidden state)
+    - Backpropogation thru time
+        - Wow, very impressive term. Time travel! 
+    - Hard to make work, in theory it should, but many times what's theoretically possible isn't possible w/in compute/data limitations
+
+
+# Transformers - The Quest for Context
+- Sutter's Dismal Truth
+- Easier to apply compute to both during Training (as its non-sequential), and inference (brute forcing the context summary)
+- Sidesteps the difficulty around context summarization entirely
+- Even tho its a more brute force method, efforts are being made to be as efficient as possible (mostly due to necessity, otherwise we top out in the low thousands) - KV Cache, Flash Attention, etc.
+- Encoder/decoder
+
+
+# LLMs
+- pretraining embeds knowledge into the weights
+- aligment still required, you don't end up with a chatbot out of the gate, just auto-complete (RLHF or something similar is needed)
+## LLM Context Window tricks
+- Family of methods that offer an alternative to training/finetuning to improve performance on specific tasks
+- Few shot examples
+- Chain of Thought (bootstrapping your own examples/self reinforcing context "I do th smallest chunk of work correctly and then build from there to a final answer")
+- RAG injection of the answer for it to then synthesize a response
+    - Semantic Search
+    - Other methods of info retrieval (Knowledge Graph, DB)
+- Prompt Engineering - The dumbest + least stable of them all
+
+
+# Semantic Search/Doc Chunking
+- Maybe the most impactful thing to come out of this
+
+# Diffusion
+- Denoising as a training example generator
+- Guidance w/in a latent space via joint embeddings
 
 
 
