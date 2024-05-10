@@ -173,8 +173,10 @@
     - Richer than it seems (critics like to dismiss this "Its just picking the next word". Yes... But...)
       - King _______ was an David's father and a wise man.
       - Portland is in _______. It's precise long/lat are .... (Many Portlands. Have to learn to distinguish from Oregon given context. Not easy!)
-        - <img src="./imgs/portlands_of_the_us.jpeg">
-        - <img src="./imgs/portlands_of_the_us2.jpeg">
+        - <img src="./imgs/portlands_of_the_us.jpeg" height="300px">
+        - <img src="./imgs/portlands_of_the_us2.jpeg" height="300px">
+
+
 ## Bootstrapping into other Domains
 - Contrastive Learning approaches (CLIP)
   - Given a Language Model (which has deep understanding of concepts) we can expand into areas like Images
