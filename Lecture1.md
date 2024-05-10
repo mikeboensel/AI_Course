@@ -112,6 +112,46 @@
             - Can be learned
             - Can be interpolated over
 
+# NN
+- Can learn any f(x) (Universal Approximation Theorem)
+- <MNIST w/ dense NN>
+    - Show MNIST, explain how a labeled dataset works
+    - Graph losses
+
+
+# Overfitting/not generalizing
+
+
+
+# Datasets/Contests/Leaderboards
+- What gets measured gets done
+- Collection/labeling of data is a very expensive endeavor
+- Even collection of "unlabeled data" is expensive
+    - Scraping, storage
+- Having readily available datasets for different domains facilitates research
+- ImageNET
+- Most of the progress recently has been in LLMs, more difficult to score/setup challenges
+    - Interesting approach from 
+
+# Theory is great... in theory
+- Universal learners, but when we talk about anything it should always be w/in the context of a budget (time, compute, money, memory used, data needed, etc.)
+    - Can learn anything but in what timeframe? How much data is needed?
+- ConvNet (AlexNet from ImageNet challenge)
+    - Much better perf/training time w/ fewer params (shared -- Feature extractors)
+    - ConvNet visualizations of layers activations
+        - Google Deepdream
+    - Key idea: Injection of a "Human prior" - prior knowledge or intuitions about how to setup the network
+        - Biases the network too tho (may make it harder to discover relationships that are there, but hidden/unintuitive)
+            - Sometimes good (helps deter adverserial attacks), sometimes bad (doesn't learn better features, instead just learns the ones we know)
+            - <Exercise: Single pixel at (0,0) to indicate class, maybe even just use lower couple of bits to indicate.>
+
+# AlexNet introduces a few things we should talk about
+- GPUs
+    - Specialized HW (budget of transistors) - can't do as many different types of operations as CPU, but massively parallel (and we only need simple ops for NNs)
+- Going much deeper
+    - Hit a wall here. Residual connections fixed. Intuition: If we can learn something in X layers, should be able to learn that same thing in X+1 layers if that final layer acts as a pass through.
+
+
 # Sequence to Sequence
 - RNNs
     - Going to look very impressive, but really a simple idea
@@ -191,6 +231,9 @@
   - "here's a summary" vs "Here's everything that's happened to this point"
   -  constant vs Quadratic complexity
   - Unlimited range vs limited (altho increasing! Google advertising 1M Token Context Window)
+
+
+# Huggingfaces/Replicate
 
 # Misc
 Graph - need to keep in mind what this represents (infinite resolution). Reality is limited sampling, which may not be representative
