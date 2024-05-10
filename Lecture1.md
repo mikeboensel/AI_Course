@@ -112,7 +112,6 @@
             - Can be learned
             - Can be interpolated over
 
-
 # Sequence to Sequence
 - RNNs
     - Going to look very impressive, but really a simple idea
@@ -150,8 +149,46 @@
 - Denoising as a training example generator
 - Guidance w/in a latent space via joint embeddings
 
+# Basic Learning Loop
+- Given some dataset, create a Model (computational graph of parameters/operations)
+- Define a Loss (Obective) f(x)
+- Via Calculus take small steps for each parameter to minimize this Loss f(x)
+## Model Complexity
+- Needs to be >= order of complexity of the underlying function
+  - <Show underparameterized polynomial>
+  - <Show overparameterized polynomial>
+## Regularization
+
+## Hyperparameters
+- Were using polynomial, but in practice just use a bunch of Matrix Mults + non-linearities
+  - <Find example of this visualized>
 
 
+# The Semantic Breakthru
+- Sequence-> Sequence
+  - Machine Translation
+- Discovery of Embeddings (language as Math)
+- Pre-training tasks
+  - Next word prediction
+    - Richer than it seems (critics like to dismiss this "Its just picking the next word". Yes... But...)
+      - King _______ was an David's father and a wise man.
+      - Portland is in _______. It's precise long/lat are .... (Many Portlands. Have to learn to distinguish from Oregon given context. Not easy!)
+        - <img src="./imgs/portlands_of_the_us.jpeg">
+        - <img src="./imgs/portlands_of_the_us2.jpeg">
+## Bootstrapping into other Domains
+- Contrastive Learning approaches (CLIP)
+  - Given a Language Model (which has deep understanding of concepts) we can expand into areas like Images
+  - Internet images have `alt` text that provides a (normally poor) description.
+    - We have our langugage prior. We know where that maps in the Language Domain. Bring the 2 Domains together in a joint embedding. Now we can describe images.
+
+# Transformers - The Quest for Context! (Lamest Michael Bay movie you will ever see)
+- `Context Window` - What can I take into account when making my decision at time t?
+  - Technical note: Window will only include past events when doing Inference, may include future as well when doing Training/PreTraining
+- RNNs try to maintain Context via a Hidden State computed at each step
+- Lazy approach, just have all Context available at all times (computationally much more expensive, approaches are moving back toward Hidden State, but currently this just works so well)
+  - "here's a summary" vs "Here's everything that's happened to this point"
+  -  constant vs Quadratic complexity
+  - Unlimited range vs limited (altho increasing! Google advertising 1M Token Context Window)
 
 # Misc
 Graph - need to keep in mind what this represents (infinite resolution). Reality is limited sampling, which may not be representative
