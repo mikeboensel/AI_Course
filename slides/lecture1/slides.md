@@ -45,6 +45,10 @@ Embedding viz: https://projector.tensorflow.org/
 -->
 
 ---
+src: ./pages/intro.md
+---
+
+---
 layout: image-right
 image: /public/common_profile_pic.jpg
 backgroundSize: "90%"
@@ -389,8 +393,9 @@ So...
 layout: image
 image: /public/huggingfaces.jpg
 backgroundSize: "90%"
+title: Huggingfaces Overview
 ---
-# Huggingfaces
+
 
 ---
 ---
