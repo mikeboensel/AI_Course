@@ -35,6 +35,13 @@ A Boston AI User Group presentation
 
 <!--
 The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
+Chatbot arena: https://arena.lmsys.org/
+MNIST: https://en.wikipedia.org/wiki/MNIST_database
+      https://huggingface.co/datasets/mnist
+Embedding viz: https://projector.tensorflow.org/      
+
+
+
 -->
 
 ---
@@ -160,6 +167,21 @@ backgroundSize: "75%"
 
 ---
 ---
+# Any sufficiently advanced tech is indistinguishable from magic
+
+<div style="display:flex;justify-content: space-around;">
+<img src="/public/arthur_c_clark2.jpg" width="30%" style="margin:auto">
+<img src="/public/arthur_c_clark.jpg" width="20%" style="margin:auto">
+
+</div>
+
+---
+layout: center
+
+---
+# Any tech, regardless of how advanced, becomes familiar and underappreciated with increasing use.
+---
+---
 # Marketing term
 - A way to juice your stock price. 
 - Mentions of AI during investor conference calls:
@@ -246,9 +268,61 @@ image: "/public/robot_bouncer.webp"
 ---
 ---
 # 3 Key ideas (continued)
-2. There's a deep underlying structure to the universe (latent spaces/embeddings, model merging, generative AI ability to interpolate)
+2. There's a deep underlying structure to the universe
+- We can interpolate over this structure
+  - What is interpolation?
+    - Start point -> End point in a space we performing a blending
+<div grid="~ cols-2 gap-2" m="t-2">
+<img src="/public/interpolation_linear.avif" width="60%">
+<img src="/public/interpolation_rgb_color_wheel.jpg" width="60%">
+</div>
+  
+
+<!-- 
+latent spaces/embeddings, model merging (a task dimension)
+-->
+
+---
+---
+# Interpolation Station
 - Even things that might not seem interpolatable
     - Ex: human faces https://thispersondoesnotexist.com/
+- Me vs Lebron James vs Yo-yo Ma
+
+| Person    | Height | Level of Fame | Basketball-ness | 
+| :--------: | :-------: | :-------: | :-------: | 
+| <img src="/public/common_profile_pic.jpg" width="100px">  | 8 | 10 | 10 |
+| <img src="/public/lebron_james.avif" width="100px"> | 6 | 0 | 3 |
+| <img src="/public/yoyo_ma.jpg" width="100px">   | 4 | 6 | 0 |
+
+- What are these dimensions?
+<style>
+  img{
+  /* text-align:center; */
+   margin-left:25%;
+  }
+</style>
+
+<!--
+Lebron James is basketball. You might look at me and think "that guy probably played a long time ago for a little bit". Yoyo ma you assume would explode if he ever touched one.
+
+What are these dimensions? Unfortunately, rarely end up this clear cut in terms of "this dimension encodes this thing we understand".
+
+ What range can they take? Lazily just put things on a 0-10 scale here. 
+-->
+
+---
+layout: center
+image: text-center
+title: ENHANCE
+---
+
+<div style="text-align:center">
+<span style="color:blue">ENHANCE!</span>
+
+https://projector.tensorflow.org/
+</div>
+
 ---
 ---
 # 3 Key ideas (continued)
@@ -281,6 +355,18 @@ So...
 - Having readily available datasets for different domains facilitates research
 - MNIST - https://huggingface.co/datasets/mnist
 - ImageNET - https://huggingface.co/datasets/imagenet-1k
+
+
+---
+layout: image
+image: /public/huggingfaces.jpg
+backgroundSize: "90%"
+---
+# Huggingfaces
+
+---
+---
+# Measuring is getting harder...
 - Most of the progress recently has been in LLMs, more difficult to score/setup challenges
     - Interesting approach from https://arena.lmsys.org/ (Chatbot arena) -- ELO system and head to head contests
 
