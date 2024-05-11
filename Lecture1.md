@@ -1,9 +1,3 @@
-# "Where are we going?"
-- Too often things are taught academically to be 100% technically accurate
-    - Taught by people who are experts in the field. 
-    - I have a different approach. Get 90% of the meaning. Fill it in later. Explain it in a way that rather than saying "Goddam that guy is smart" its more like "Why didn't I get into engineering. A monkey could do this". 
-        - There is OFC more to this than I'm initially discussing, but I think its hugely helpful to start from a place of "Oh, ok, I get what you're doing and where you're going" vs "I don't know any of those words. I'm not even sure what the point of this is, I'm drowing in terminology"
-
 - Motivating example
     - I'd argue a lot of the Math that we all learn through school is just about developing a numbering system and some basic operations around that.
     - Pretty good student. Better at math than most as I ended up going into engineering, which means to me I can talk with authority to anyone other than mathematicians and physicists.
@@ -67,34 +61,6 @@
 - No one wants to look dumb and so we end up all talking past each other, minimizing learning
     - I think that's an impulse that we all need to make concious efforts to suppress... hence this series' title : Mr Big Brain's Super Duper AI Course
 
-
-# What is AI?
-- Nebulous term. Basically, "computer doing something useful". 
-- Spellcheck
-    - Not particularly smart. 
-    - But at one time revolutionary.
-        - Brings up another 
-- Marketing term
-    - Mentions of AI during investor conference calls
-    - <img src="./imgs/earning_call_ai_mentions.png" height="300px">
-- Umbrella term
-    - <img src="./imgs/venn_diagram_ai.JPG" height="300px">
-    - Machine Learning is what has generated all the interesting progress, that's what we'll focus on
-        - `Learning from data examples`
-            - Instructing a machine is hard. Humans are bad at considering a state space. May not even be able to describe (or know) how to find a solution.
-                - Bouncer example.
-                    - Task: Don't allow anyone through the door unless they are of age.
-                        - Sounds simple (Gate access to one entry point, )
-                        - What does that mean? People should be 18+ years old
-                        - Which IDs? Other states? Passports? Foreign IDs? Driver's licences only?
-                        - Where to find the DOB information?
-                        - Someone shows up with a 2 digit year "12" are they 112? Or 12?
-                        - Stop people from entering the door w/o checking ID
-                            - What about the window?
-                        - Tremendous amount of prior knowledge about the world must either be present, or accounted for by programmer. 
-                        - Many failure modalities
-                - House pricing example. 
-                    - Many examples. Pricing + features. Something discoverable.
 
 # Key ideas
     1. Neural Nets are f(x) approximators (that much is uncontroversial, but I'd go further and say they are "DISCOVERERS") and the world is full of functions
