@@ -180,9 +180,12 @@ layout: center
 
 ---
 # Any tech, regardless of how advanced, becomes familiar and underappreciated with increasing use.
+
+<!-- Human nature. Hedonic treadmill. A legacy of our evolution. "Give me more, give me better, now!" Strive/desire more, laziness/lack of greed not rewarded.
+Buddhism/self-mastery. Not our fault, but must temper -->
 ---
 ---
-# Marketing term
+# AI is "the new hotness"
 - A way to juice your stock price. 
 - Mentions of AI during investor conference calls:
 <img src="/public/earning_call_ai_mentions.png" height="300px">
@@ -194,20 +197,29 @@ backgroundSize: "75%"
 ---
 # Umbrella term
 
+<!-- Some mix of Stats, Computer Science, Machine Learning, Neural Networks, Deep Learning, "Big Data", Data Science
+A fair amount of these terms are themselves vague catch-alls.
+
+-->
+
 ---    
 ---
-# Machine Learning
-- is what has generated all the interesting progress, that's what we'll focus on
-- `Learning from data examples`
-- Let's examine why this is interesting
+# We will focus on Machine Learning
+- The main driver of recent progress.
+- Best simple definition: 
+    - ### Learning from data examples
+
+Let's examine why this is interesting
 
 ---
 ---
 # Common Sense isn't very common
 - Instructing a machine is hard. Humans are bad at considering a state space or the algorithm they use to navigate it. May not even be able to describe (or know) how to find a solution.
 - Consider how much effort/time/expense goes into training a new hire. Its a ton. 
-- A new hire is DRAMATICALLY smarter than a computer. Computers are dumb. They work quickly, which can give them impression they aren't and they can be instructed to do intelligent/useful things, but fundamentally dumb
-- What do I mean by dumb? 
+- A new hire is DRAMATICALLY smarter than a computer. 
+- Computers are dumb. Don't mistake working quickly with intelligence
+- They're equally happy to quickly shoot themselves in the foot repeatedly.
+- They do anything you instruct them to (regardless of consequences)
 
 ---
 ---
@@ -255,9 +267,15 @@ image: "/public/robot_bouncer.webp"
 - Many failure modalities
 
 ---
+layout: center
 ---
-# If you had to pick 3 key ideas to explain ML
-1. Neural Nets are f(x) approximators and the world is full of functions
+# If you had to pick 3 key ideas to explain ML...
+
+<!-- Useful exercise. Can we condense this down to some central kernel?-->
+---
+---
+# Key 1: The world is full of f(x)'s and we can discover them
+- Neural Nets are f(x) approximators and the world is full of functions
 - Quick f(x) definition - Equation that takes an input and gives some output
   - F(x) for pricing a house, picking an NBA draftee, writing a letter, even art
   - <img src="/public/nfl_draft.webp" width="20%">
@@ -267,8 +285,19 @@ image: "/public/robot_bouncer.webp"
 
 ---
 ---
-# 3 Key ideas (continued)
-2. There's a deep underlying structure to the universe
+# Software 2.0
+- Andrej Karpathy blog post: https://karpathy.medium.com/software-2-0-a64152b37c35
+- Highly related effort to what I've spent my career on (SW Dev)
+  - Exploring a large State space
+  - Attempting to anticipate different scenarios and respond intelligently
+- <img src="/public/software2.0.webp" width="30%">
+- 2.0 implies a replacement. I'm less sure of that. Certainly a different way w/ radically different trade-offs.
+- <img src="/public/software2.0_2.webp" width="30%">
+
+
+---
+---
+# Key 2: Deep underlying structure exists in the universe
 - We can interpolate over this structure
   - What is interpolation?
     - Start point -> End point in a space we performing a blending
@@ -325,8 +354,7 @@ https://projector.tensorflow.org/
 
 ---
 ---
-# 3 Key ideas (continued)
-3. Once you've learned something its easier to learn other similar things
+# Key 3: Subsequent learning is easier
 - Intuitively makes sense to us. Magnus Carlsen - Chess. If I told you he was also really good at checkers, backgammon, etc. You'd be pretty accepting of it.
 - `Transfer learning` -- makes sense because learning just means discovering some underlying structure about the universe. If you know some, easier to acquire others (vs being random unitialized)
 So...
