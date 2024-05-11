@@ -1,0 +1,52 @@
+---
+layout: image-right
+image: /public/common_profile_pic.jpg
+backgroundSize: "90%"
+---
+# Who am I?
+
+- SW Dev at MIT Lincoln Lab
+  - (Standard disclaimer... views not endorsed by them)
+<br>
+<br>
+- "Is this going to take my job yet?"
+  - 2010 - Pandora, other recommender systems
+  - 2015 - GANs
+  - 2022 - Transformer-based
+
+<style>
+  h1{text-align:center;}
+</style>
+
+<!--    
+- 2010 - Andrew Ng Machine Learning coursera course
+- 2015 - GAN hype
+- 2021 - Stable Diffusion/ChatGPT/Dall-E
+-->
+
+---
+layout: image-right
+image: /public/mystery_person.webp
+backgroundSize: "90%"
+---
+# Who are you?
+<br><br><br>
+- Want to target this at the audience
+- Appropriate level of detail
+- Audience participation required! 
+
+<!-- 
+I'm going periodically ask for a show of hands. Please participate as it helps me to understand the level of detail I should go into.  
+-->
+
+---
+---
+# Where are we going? (An overview and a philosophy)
+- Filler text
+
+<!--
+- Too often things are taught academically to be 100% technically accurate
+    - Taught by people who are experts in the field. 
+    - I have a different approach. Get 90% of the meaning. Fill it in later. Explain it in a way that rather than saying "Goddam that guy is smart" its more like "Why didn't I get into engineering. A monkey could do this". 
+        - There is OFC more to this than I'm initially discussing, but I think its hugely helpful to start from a place of "Oh, ok, I get what you're doing and where you're going" vs "I don't know any of those words. I'm not even sure what the point of this is, I'm drowing in terminology"
+ -->
