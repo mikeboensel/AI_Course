@@ -49,6 +49,7 @@ src: ./pages/what_is_ai.md
 ---
 
 ---
+---
 # Common Sense isn't very common
 - Instructing a machine is hard. Humans are bad at considering a state space or the algorithm they use to navigate it. May not even be able to describe (or know) how to find a solution.
 - Consider how much effort/time/expense goes into training a new hire. Its a ton. 

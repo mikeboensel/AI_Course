@@ -47,39 +47,6 @@ backgroundSize: "75%"
 ---
 
 ---
----
-# In practice
-- Nebulous umbrella term now. Basically, **computer doing something useful and impressive**.
-- I'd argue its also a moving target.
-- Ex: Spellcheck, probably revolutionary when initially released. Not particularly smart. 
-- <img src="/public/spellcheck.JPG" width="300px">
-
----
----
-# Any sufficiently advanced tech is indistinguishable from magic
-
-<div style="display:flex;justify-content: space-around;">
-<img src="/public/arthur_c_clark2.jpg" width="30%" style="margin:auto">
-<img src="/public/arthur_c_clark.jpg" width="20%" style="margin:auto">
-
-</div>
-
----
-layout: center
-
----
-# Any tech, regardless of how advanced, becomes familiar and underappreciated with increasing use.
-
-<!-- Human nature. Hedonic treadmill. A legacy of our evolution. "Give me more, give me better, now!" Strive/desire more, laziness/lack of greed not rewarded.
-Buddhism/self-mastery. Not our fault, but must temper -->
----
----
-# AI is "the new hotness"
-- A way to juice your stock price. 
-- Mentions of AI during investor conference calls:
-<img src="/public/earning_call_ai_mentions.png" height="300px">
-
----
 layout: image
 image: /public/venn_diagram_ai.JPG
 backgroundSize: "75%"
@@ -91,7 +58,42 @@ A fair amount of these terms are themselves vague catch-alls.
 
 -->
 
----    
+---
+---
+# In practice: AI is "the new hotness"
+- A way to juice your stock price. 
+- Mentions of AI during investor conference calls:
+<img src="/public/earning_call_ai_mentions.png" height="300px">
+
+---
+---
+# A moving target
+- Basically, **computer doing something useful and impressive**.
+- Ex: Spellcheck, probably revolutionary when initially released. Not particularly smart. 
+- <img src="/public/spellcheck.JPG" width="300px">
+
+---
+---
+# Any sufficiently advanced tech is indistinguishable from magic
+
+<div style="display:flex;justify-content: space-around;">
+    <img src="/public/arthur_c_clark2.jpg" width="30%" style="margin:auto">
+    <img src="/public/arthur_c_clark.jpg" width="20%" style="margin:auto">
+</div>
+
+---
+layout: center
+---
+# Any tech, regardless of how advanced, becomes familiar and underappreciated with increasing use!
+<!-- Human nature. Hedonic treadmill. A legacy of our evolution. "Give me more, give me better, now!" Strive/desire more, laziness/lack of greed not rewarded.
+Buddhism/self-mastery. Not our fault, but must temper -->
+
+---
+src: ./hedonic_treadmill.md
+hide: false
+---
+
+---
 ---
 # We will focus on Machine Learning
 - The main driver of recent progress.
