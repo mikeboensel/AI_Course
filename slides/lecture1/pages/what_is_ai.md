@@ -94,6 +94,7 @@ hide: false
 ---
 
 ---
+hide: false
 ---
 # We will focus on Machine Learning
 - The main driver of recent progress.
