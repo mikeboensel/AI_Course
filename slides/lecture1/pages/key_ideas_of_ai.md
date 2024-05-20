@@ -9,6 +9,7 @@ layout: center
 ---
 # Key 1: The world is full of f(x)'s and we can discover them
 - Neural Nets are f(x) approximators and the world is full of functions
+- If we gather data we can approximate them
 - <img src="/public/functional_world.webp" width="40%">
 
 ---
