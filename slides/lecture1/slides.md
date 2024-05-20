@@ -212,17 +212,68 @@ def relu(input):
 ---
 ---
 # How do we fit our line segments?
-1. How well are we doing? Loss or Objective function
-2. Gradient Descent
-- <img src="/public/grad_descent/grad_descent_simple.JPG">
+2 step process:
+1. How well are we doing? 
+    - Measured via a Loss f(x) (aka Objective f(x))
+2. Let's improve! 
+    - Gradient Descent
+
+<!--
+This is a very simple, very nice Loss f(x). Real ones will be many dimensional, not smoothe, etc.
+-->
 
 ---
 ---
-# St
-- <img src="/public/grad_descent/grad_descent_slope_calculation.JPG">
-- <img src="/public/grad_descent/grad_descent_detailed.png">
-- <img src="/public/grad_descent/grad_descent_3d.JPG">
-- <img src="/public/grad_descent/grad_descent_speed.JPG">
+# How good is our current Model?
+- How to measure?
+  - Depends on what the Model is targeting.
+  - Categorical
+<img src="/public/grad_descent/alexnet_predictions.png" width="50%">
+
+---
+layout: image-right
+image: /public/nn_linear_fitting.jpg
+---
+# Numeric output is simpler 
+- Sum of errors?
+  - +/- cancel. Bad property!
+- Sum of absolute errors?
+  - Linear cost, less effective in practice
+- Sum of squared errors?
+  - Widely used
+
+---
+layout: image-right
+image: /public/grad_descent/smoothe_vs_non_smoothe.jpg
+backgroundSize: "95%"
+---
+# Loss Landscape is likely complex
+- From https://www.telesens.co/loss-landscape-viz/viewer.html 
+
+---
+---
+# Gradient Descent
+<img src="/public/grad_descent/grad_descent_simple.JPG" width="75%">
+
+
+---
+---
+# Gradient Descent (cont.)
+
+<div style="display:flex; justify-content: center;">
+<img src="/public/grad_descent/grad_descent_detailed.png" width="45%">
+<img src="/public/grad_descent/grad_descent_slope_calculation.JPG" width="45%" style="margin-left:20px">
+</div>
+
+---
+---
+# We want to learn quickly
+<img src="/public/grad_descent/grad_descent_speed.png">
+
+---
+---
+# Remember the Loss Landscape is likely complex
+<img src="/public/grad_descent/grad_descent_3d.JPG">
 
 ---
 ---
