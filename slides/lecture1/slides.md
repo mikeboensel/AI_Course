@@ -202,19 +202,61 @@ def relu(input):
 ---
 ---
 # Matrices
-- As a programmer, how do you represent a bunch of variables? Not by calling out each one. Instead a list. List of lists => Matrix
-- Well studied mathematics around this (linear algebra)
-- Great for parallel operations (like multiplying/adding a lot)
+- As a programmer, how do you represent a bunch of variables?
+- Calling out each one? Nope
+```python
+w_0 = 1.1
+w_1 = .043
+# ... Great suffering later
+w_99012 = 3.30
+```
+- A list? Better.
+```python
+w = [1.1, .043,...,3.30]
+```
+- List of lists => Matrix. Better still
+```python
+w = [[1.1, .043,...,3.30], [6.54, ....]]
+```
+- In practice, having these in source would be terrible, so we have serialized model files
+```python
+model.load_state_dict(torch.load(PATH))
+```
+
+---
+---
+# Matrices (2)
+
+- Well studied mathematics around this (Linear Algebra)
+- Lends itself to parallel operations (like multiplying/adding a lot)
 - http://matrixmultiplication.xyz/
 - https://www.intmath.com/matrices-determinants/matrix-addition-multiplication-applet.php
-- Call them `tensors`. Why? Physics envy. Seems less like a herp-a-derp, just churn the #s til we get a good answer discipline. (I spent a long time reading about actual Tensors thinking that was really important, as its in all the names (TensorFlow, pyTorch Tensors, etc.))
+
+---
+---
+# Tensors
+- WTF is this?
+<img src="/public/tensor_def.jpg" width="75%">
+
+---
+---
+# Wow, lots of math... must be important
+Better learn what this is...
+
+<div style="display:flex; justify-content: center; margin-bottom:10px">
+<img src="/public/tensorflow.jpg" width="35%">
+<img src="/public/tensor_TPU.jpg" width="25%" style="margin-left:20px">
+</div>
+
+
+<img src="/public/physics_envy.jpg">
 
 ---
 ---
 # How do we fit our line segments?
 2 step process:
 1. How well are we doing? 
-    - Measured via a Loss f(x) (aka Objective f(x))
+    - Measured via running our Data thru a Loss f(x) (aka Objective f(x))
 2. Let's improve! 
     - Gradient Descent
 
@@ -272,8 +314,15 @@ backgroundSize: "95%"
 
 ---
 ---
-# Remember the Loss Landscape is likely complex
+# Remember the path is not likely to be straightforward
 <img src="/public/grad_descent/grad_descent_3d.JPG">
+
+---
+---
+# One last thing, then code!
+- Holding out data for testing/validation is important
+- Simulates the underlying reality that we almost always have insufficient data to know the true underlying distribution (the "World")
+- Model is over-parametericized, can easily just memorize the training examples (vs learning good features that will broadly generalize)
 
 ---
 ---
