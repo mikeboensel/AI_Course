@@ -322,7 +322,13 @@ backgroundSize: "95%"
 # One last thing, then code!
 - Holding out data for testing/validation is important
 - Simulates the underlying reality that we almost always have insufficient data to know the true underlying distribution (the "World")
-- Model is over-parametericized, can easily just memorize the training examples (vs learning good features that will broadly generalize)
+- Model is generally over-parametericized, very "powerful" relative to the problem. 
+<img src="/public/underfit_overfit_tradeoff.jpg" width="70%">
+
+<!-- - Can easily just memorize the training examples (vs learning good features that will broadly generalize)
+- Why do we start like this? Because it would suck to do a whole bunch of training only to find out we don't have a powerful enough model. Err on side of caution here. 
+- Model really shouldn't be very confident in any of its predictions as data is always sparse at high dimensionality
+- Overfit/Underfit  -->
 
 ---
 ---
@@ -343,7 +349,6 @@ backgroundSize: "95%"
 - MNIST - https://huggingface.co/datasets/mnist
 - ImageNET - https://huggingface.co/datasets/imagenet-1k
 
-
 ---
 layout: image
 image: /public/huggingfaces.jpg
@@ -357,6 +362,28 @@ title: Huggingfaces Overview
 # Measuring is getting harder...
 - Most of the progress recently has been in LLMs, more difficult to score/setup challenges
     - Interesting approach from https://arena.lmsys.org/ (Chatbot arena) -- ELO system and head to head contests
+
+
+---
+---
+# AlexNet + Convolutions + GPUs
+- ImageNet
+- Jumpstarted the vision/image processing community. Huge advance. Subsequent progress.
+
+---
+src: ./pages/gpus.md
+---
+
+---
+---
+# Convolutional layers visualized
+- Layers deeper learn more advanced features. Final layer 
+
+---
+---
+# Adverserial inputs
+- Follow naturally from being able to find high activations for inputs.
+- Make a stop sign read as a green light
 
 
 ----------------------

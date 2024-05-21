@@ -99,6 +99,6 @@ hide: false
 # We will focus on Machine Learning
 - The main driver of recent progress.
 - Best simple definition: 
-    - ### Learning directly from data examples
+    - ### Learning an underlying structure from limited data examples
 
 Let's examine why this is interesting
