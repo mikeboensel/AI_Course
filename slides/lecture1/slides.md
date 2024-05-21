@@ -332,6 +332,22 @@ backgroundSize: "95%"
 
 ---
 ---
+# Curse of dimensionality
+- All datasets is sparse at high dimensions
+- Our toy graphs are not representative
+<img src="/public/curse_of_dimensionality.png" width="100%">
+- TODO: Jupyter notebook showing closest/average distance between points as dimensions increase
+
+---
+---
+# Test/Validation/Train split
+<img src="/public/test_train_validation_split.webp" width="100%">
+
+- Will act to `Regularize` the Model's surface (make it smoother), but having high loss if we overfit vs the underlying distribution
+  - Model should be fairly uncertain given the data sparsity
+
+---
+---
 
 # MNIST w/ dense NN
     - Show MNIST, explain how a labeled dataset works
@@ -365,10 +381,42 @@ title: Huggingfaces Overview
 
 
 ---
+layout: two-cols-header
+---
+# Its ovah!?!
+::left::
+- What you just learned, a Neural Net with Fully Connected, can learn anything
+- So we're done, right? Pack it up, call it a day
+- Theory is great in theory
+
+::right::
+<video width="320" height="240" controls>
+  <source src="/public/vince_carter_its_over.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+---
+---
+# You need a budget
+Potential limiting factors:
+- Transistor count
+- Training time
+- Power usage
+- Total data
+- Model size (parameter count)
+- Etc.
+
+<!-- ::right::
+<img src="/public/you_need_a_budget.jpg" width="95%"> -->
+
+---
 ---
 # AlexNet + Convolutions + GPUs
 - ImageNet
 - Jumpstarted the vision/image processing community. Huge advance. Subsequent progress.
+- Powerful inductive bias
+  - Nearby pixels in an image have a relationship to each other 
+  - Fully connected would not assume anything like this, would have to discover)
 
 ---
 src: ./pages/gpus.md
@@ -377,7 +425,9 @@ src: ./pages/gpus.md
 ---
 ---
 # Convolutional layers visualized
-- Layers deeper learn more advanced features. Final layer 
+- Layers deeper learn more advanced features. 
+- Final layer performs task specific operation
+- https://towardsdatascience.com/how-to-visualize-convolutional-features-in-40-lines-of-code-70b7d87b0030
 
 ---
 ---
