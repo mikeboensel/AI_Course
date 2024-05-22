@@ -325,15 +325,25 @@ model.load_state_dict(torch.load(PATH))
 # Matrices (2)
 
 - Well studied mathematics around this (Linear Algebra)
-- Lends itself to parallel operations (like multiplying/adding a lot)
-- http://matrixmultiplication.xyz/
-- https://www.intmath.com/matrices-determinants/matrix-addition-multiplication-applet.php
+- Lends itself to doing operations across a lot of data in very little notation
+  - Say calculating thousands of line segments...
+- 2 nice visualizers:
+  - http://matrixmultiplication.xyz/
+  - https://www.intmath.com/matrices-determinants/matrix-addition-multiplication-applet.php
 
 ---
 ---
 # Tensors
-- WTF is this?
+WTF is this?
+
 <img src="/public/tensor_def.jpg" width="75%">
+
+<!--
+You'll see this term come up a lot. 
+
+The Wikipedia page is very dense.
+
+-->
 
 ---
 ---
@@ -348,26 +358,47 @@ Better learn what this is...
 
 <img src="/public/physics_envy.jpg">
 
----
----
-# How do we fit our line segments?
-2 step process:
-1. How well are we doing? 
-    - Measured via running our Data thru a Loss f(x) (aka Objective f(x))
-2. Let's improve! 
-    - Gradient Descent
-
 <!--
-This is a very simple, very nice Loss f(x). Real ones will be many dimensional, not smoothe, etc.
+Its a fancy word for a Matrix.
 -->
 
 ---
+layout: image-right
+image: /public/measure_then_cut.png
+backgroundSize: "95%"
+---
+# How do we fit our line segments?
+2 step process:
+  1. Measure
+      - How well are we doing? 
+      - Found by running our Data thru a Loss f(x) (aka Objective f(x))
+  2. "Cut"
+      - Improve via Gradient Descent
+
+---
+layout: image-right
+image: /public/grad_descent/alexnet_predictions.png
+backgroundSize: "95%"
 ---
 # How good is our current Model?
 - How to measure?
   - Depends on what the Model is targeting.
-  - Categorical
-<img src="/public/grad_descent/alexnet_predictions.png" width="50%">
+  - Categorical is interesting
+  - ImageNet Model (AlexNet on the right)
+
+<!--
+ImageNet
+- 1000 images classes
+- Model is given a picture, must determine what the Label is
+
+Some seem unfair
+- How heavily should we penalize
+- Dalmation w/ cherry in it (bad training example)
+- Convertible/Grill
+
+Tend to do pretty simple measures
+- Right class or not?
+-->
 
 ---
 layout: image-right
@@ -386,18 +417,37 @@ layout: image-right
 image: /public/grad_descent/smoothe_vs_non_smoothe.jpg
 backgroundSize: "95%"
 ---
-# Loss Landscape is likely complex
+# Loss f(x) Landscape is likely complex
 - From https://www.telesens.co/loss-landscape-viz/viewer.html 
 
----
----
-# Gradient Descent
-<img src="/public/grad_descent/grad_descent_simple.JPG" width="75%">
+<!--
+Seeing several popular Models with their loss visualized relative to the weights.
 
+How? Thought this was thousands of dimensions? 
+- Dimensionality reduction techniques. Lose some stuff, but can keep the general idea.
+
+-->
 
 ---
 ---
-# Gradient Descent (cont.)
+# Our beautiful, simple Loss Landscape 
+- Nothing in the real world looks this nice and smoothe
+- We can perform Gradient Descent
+  - AKA: Walking down the slope
+<img src="/public/grad_descent/grad_descent_simple.JPG" width="70%">
+
+<!--
+Really important to remember when looking at these:
+- "Go there, go to the low point you dumb Model!"
+- Creating a full graph of a real Model would be incredibly expensive (likely impossible)
+- A graph like this involves plugging in #s at a bunch of places to generate points, then connecting them.
+
+All we know is our current weights losses + our current slope
+
+-->
+---
+---
+# Gradient Descent (in more detail)
 
 <div style="display:flex; justify-content: center;">
 <img src="/public/grad_descent/grad_descent_detailed.png" width="45%">
@@ -444,10 +494,8 @@ backgroundSize: "90%"
 # Model will contort itself
 - Just trying to hit all datapoints
 - Doesn't look so bad in our low-D graphs
-- Reality is its making these complex shapes based off very few examples
-<img src="/public/underfit_overfit_tradeoff.jpg" width="50%">
-
-
+- Reality is its making these complex shapes based off very few examples relative to the overall space
+<img src="/public/underfit_overfit_tradeoff_reality.jpg" width="90%">
 
 
 ---
@@ -460,19 +508,22 @@ backgroundSize: "90%"
 
 
 ---
+background: "/public/fermat_last_theorem.jpg"
 ---
-
 # Our toolbox
-- Python - Super popular, widely taught, very natural programming language. Huge library of useful stuff. Downside: slow!
-  - numpy - Highly optimized CPU-based math operations
-  - pandas - Data exploration
-  - matplotlib - Graphing
-  - pytorch - GPU based math operations, NN specifics, automatic gradient calculations (it handles our calculus)
-- Jupyter
-  - Program of the year like 10 years ago
-  - More convenient than pure code
-  - "Notebook" concept from laboratory
-  - Google Colab
+<!-- <v-clicks depth="2"> -->
+
+| Tool    | Description |
+| -------- | ------- |
+| <img src="/public/tools_python.png" width="30px" style="display:inline-block">`Python`  | Super popular, widely taught, very natural programming language. Huge library of useful stuff. Downside: slow!   |
+| <img src="/public/tools_numpy.avif" width="35px" style="display:inline-block"> | Highly optimized CPU-based math operations     |
+| <img src="/public/tools_pandas.svg" width="45px" style="display:inline-block"> pandas    | Data exploration    |
+| matplotlib    | Graphing    |
+| <img src="/public/tools_pytorch.png" width="45px" style="display:inline-block"> pytorch    | GPU based math operations, NN specifics, automatic gradient calculations (it handles our calculus!) |
+| Jupyter   | "Notebook" concept from laboratory,  More convenient than pure code |
+|  <img src="/public/tools_colab.png" width="65px" style="display:inline-block"> Google Colab     | Free hosted Jupyter    |
+
+<!-- </v-clicks> -->
 
 ---
 ---
