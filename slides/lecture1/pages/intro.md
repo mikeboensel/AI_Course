@@ -9,7 +9,7 @@ backgroundSize: "90%"
   - (Standard disclaimer... views not endorsed by them)
 <br>
 <br>
-- "Is this going to take my job yet?"
+- >Is this going to take my job yet?"
   - 2010 - Pandora, other recommender systems
   - 2015 - GANs
   - 2022 - Transformer-based
@@ -22,6 +22,8 @@ backgroundSize: "90%"
 - 2010 - Andrew Ng Machine Learning coursera course
 - 2015 - GAN hype
 - 2021 - Stable Diffusion/ChatGPT/Dall-E
+
+Occassionally do this professionally (20% of my time), but mostly just interested, trying to follow along.
 -->
 
 ---
