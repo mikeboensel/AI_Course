@@ -554,7 +554,7 @@ Potential limiting factors:
 - Training time
 - Power usage
 - Total data
-  - We can only collect so much and want it to generalize
+  - We can only collect so much and want it to **generalize**
 - Model size (parameter count)
 - Etc.
 
@@ -608,6 +608,7 @@ backgroundSize: "90%"
 
 - <a href="https://replicate.com/">"AI behind an API" - Replicate</a>
 - <a href="https://huggingface.co/">AI's Github - HuggingFaces</a>
+- <a href="https://civitai.com/models">Anything goes shitshow - Civit AI</a>
 
 
 ---
