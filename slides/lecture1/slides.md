@@ -336,7 +336,22 @@ backgroundSize: "95%"
 - All datasets is sparse at high dimensions
 - Our toy graphs are not representative
 <img src="/public/curse_of_dimensionality.png" width="100%">
-- TODO: Jupyter notebook showing closest/average distance between points as dimensions increase
+- https://www.visiondummy.com/2014/04/curse-dimensionality-affect-classification/
+
+
+---
+layout: image-right
+image: /public/contortionist.jpg
+backgroundSize: "90%"
+---
+# Model will contort itself
+- Just trying to hit all datapoints
+- Doesn't look so bad in our low-D graphs
+- Reality is its making these complex shapes based off very few examples
+<img src="/public/underfit_overfit_tradeoff.jpg" width="50%">
+
+
+
 
 ---
 ---
@@ -350,20 +365,75 @@ backgroundSize: "95%"
 ---
 
 # MNIST w/ dense NN
-    - Show MNIST, explain how a labeled dataset works
-    - Graph losses
-## NFL Draft modeling -- https://github.com/nflverse/nflverse-data/releases  https://www.pro-football-reference.com/draft/2002-combine.htm
+- https://github.com/mikeboensel/AI_Course/blob/main/slides/lecture1/_notebooks/mnist/mnist_pytorch.ipynb
+
+<!-- NFL Draft modeling -- https://github.com/nflverse/nflverse-data/releases  https://www.pro-football-reference.com/draft/2002-combine.htm -->
+
 
 ---
 ---
-# Datasets/Contests/Leaderboards
-- What gets measured gets done
+# It's ovah!?!
+- What you just learned, a Neural Net with Fully Connected, can learn anything
+- So we're done, right? Pack it up, call it a day
+- Theory is great in theory
+
+<video width="320" height="240" controls style="margin-left:30%">
+  <source src="/public/vince_carter_its_over.mp4" type="video/mp4">
+</video>
+
+---
+---
+# You need a budget
+Potential limiting factors:
+- Transistor count
+- Training time
+- Power usage
+- Total data
+  - We can only collect so much and want it to generalize
+- Model size (parameter count)
+- Etc.
+
+<!-- ::right::
+<img src="/public/you_need_a_budget.jpg" width="95%"> -->
+
+---
+---
+# The importance of Datasets
 - Collection/labeling of data is a very expensive endeavor
 - Even collection of "unlabeled data" is expensive
     - Scraping, storage
 - Having readily available datasets for different domains facilitates research
-- MNIST - https://huggingface.co/datasets/mnist
-- ImageNET - https://huggingface.co/datasets/imagenet-1k
+<div style="display:flex; justify-content: center;">
+<img src="/public/datasets/mnist_overview.jpg" width="35%">
+<img src="/public/datasets/imagenet_banner.jpg" width="35%">
+<img src="/public/datasets/the_pile.png" width="30%">
+
+</div>
+
+---
+layout: image-right
+image: /public/elo_system.jpg
+backgroundSize: "90%"
+---
+# What gets measured gets done
+- Competitions encourage regular progress
+- Contests around different datasets
+- Metrics can be hard! Accuracy used to be enough
+- Most of the progress recently has been in LLMs, more difficult to score/setup challenges
+    - Interesting approach from <a href="https://arena.lmsys.org/"> Chatbot arena</a> 
+    - ELO system and head to head contests
+
+---
+layout: image-right
+image: /public/elo_system2.png
+backgroundSize: "100%"
+---
+# Elo in detail
+- TLDR; Beat higher rated opponents, move up quickly
+
+
+<!-- Love a good inscrutable graph! It must be telling me something really important, let's stare at it until it gives up its secrets.
+-->
 
 ---
 layout: image
@@ -375,48 +445,12 @@ title: Huggingfaces Overview
 
 ---
 ---
-# Measuring is getting harder...
-- Most of the progress recently has been in LLMs, more difficult to score/setup challenges
-    - Interesting approach from https://arena.lmsys.org/ (Chatbot arena) -- ELO system and head to head contests
-
-
----
-layout: two-cols-header
----
-# Its ovah!?!
-::left::
-- What you just learned, a Neural Net with Fully Connected, can learn anything
-- So we're done, right? Pack it up, call it a day
-- Theory is great in theory
-
-::right::
-<video width="320" height="240" controls>
-  <source src="/public/vince_carter_its_over.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-
----
----
-# You need a budget
-Potential limiting factors:
-- Transistor count
-- Training time
-- Power usage
-- Total data
-- Model size (parameter count)
-- Etc.
-
-<!-- ::right::
-<img src="/public/you_need_a_budget.jpg" width="95%"> -->
-
----
----
 # AlexNet + Convolutions + GPUs
 - ImageNet
 - Jumpstarted the vision/image processing community. Huge advance. Subsequent progress.
 - Powerful inductive bias
   - Nearby pixels in an image have a relationship to each other 
-  - Fully connected would not assume anything like this, would have to discover)
+  - Fully connected would not assume anything like this, would have to discover
 
 ---
 src: ./pages/gpus.md

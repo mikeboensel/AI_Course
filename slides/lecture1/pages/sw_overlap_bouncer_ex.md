@@ -41,6 +41,9 @@ image: "/public/robot_bouncer.webp"
       - <img src="/public/drivers_licence.webp" width="70%">
     - 12/1/1985 ✅
     - 5/22/2010 ❌
+<!-- Heavily stylized for entertainment purposes. Might be something more like a kiosk that takes an ID, opens door if appropriate. 
+-->
+
 ---
 ---
 # Bouncer example gets hairier    
@@ -53,3 +56,11 @@ image: "/public/robot_bouncer.webp"
 - Not even touching on teenagers acting w/ malice...
 - Tremendous amount of knowledge about the world must be encoded for this to succeed. 
 - Many failure modalities
+
+<!--
+Matt Levine: All large organizations have someone committing crime at a given time. That's different than being a criminal organization. How? Controls/making an attempt.
+Actual task is reasonable compliance.
+Real goal is to sell as much alcohol as possible while not getting in trouble with the law.
+Not ever look in and have it look like there's a high school field trip.
+So going to want to support a ton of different ID types because a default NO policy would be perfectly compliant, but no revenue. Shade toward being overly permissive.
+-->

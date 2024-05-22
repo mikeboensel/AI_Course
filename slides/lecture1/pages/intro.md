@@ -40,9 +40,21 @@ I'm going periodically ask for a show of hands. Please participate as it helps m
 -->
 
 ---
+layout: image-right
+image: /public/mission-impossible.jpg
 ---
-# Where are we going? (An overview and a philosophy)
-- Filler text
+# Goal: Something for everyone
+- Threading a needle here
+- Newbie accessible
+  - High level understanding
+    - Details might be overwhelming
+  - A roadmap to learn
+
+- Something for those already in the field
+  - Insights
+  - Resources you haven't seen before
+  - (Hopefully)
+
 
 <!--
 - Too often things are taught academically to be 100% technically accurate
