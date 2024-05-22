@@ -483,6 +483,7 @@ All we know is our current weights losses + our current slope
 - All datasets is sparse at high dimensions
 - Our toy graphs are not representative
 <img src="/public/curse_of_dimensionality.png" width="100%">
+- https://github.com/mikeboensel/AI_Course/blob/main/slides/lecture1/_notebooks/curse_of_dimensionality/dimensionality.ipynb
 - https://www.visiondummy.com/2014/04/curse-dimensionality-affect-classification/
 
 
