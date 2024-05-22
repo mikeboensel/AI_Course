@@ -43,7 +43,7 @@ I'm going periodically ask for a show of hands. Please participate as it helps m
 layout: image-right
 image: /public/mission-impossible.jpg
 ---
-# Goal: Something for everyone
+# Talk Goals: Something for everyone
 - Threading a needle here
 - Newbie accessible
   - High level understanding
