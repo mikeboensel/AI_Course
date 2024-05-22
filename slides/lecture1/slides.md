@@ -511,7 +511,7 @@ backgroundSize: "90%"
 background: "/public/fermat_last_theorem.jpg"
 ---
 # Our toolbox
-<!-- <v-clicks depth="2"> -->
+<v-clicks depth="2">
 
 | Tool    | Description |
 | -------- | ------- |
@@ -523,7 +523,7 @@ background: "/public/fermat_last_theorem.jpg"
 | Jupyter   | "Notebook" concept from laboratory,  More convenient than pure code |
 |  <img src="/public/tools_colab.png" width="65px" style="display:inline-block"> Google Colab     | Free hosted Jupyter    |
 
-<!-- </v-clicks> -->
+</v-clicks>
 
 ---
 ---
@@ -602,46 +602,35 @@ backgroundSize: "100%"
 
 ---
 layout: image
-image: /public/huggingfaces.jpg
 backgroundSize: "90%"
-title: Huggingfaces Overview
 ---
+# Valuable Resources
 
-
----
----
-# AlexNet + Convolutions + GPUs
-- ImageNet
-- Jumpstarted the vision/image processing community. Huge advance. Subsequent progress.
-- Powerful inductive bias
-  - Nearby pixels in an image have a relationship to each other 
-  - Fully connected would not assume anything like this, would have to discover
-
----
-src: ./pages/gpus.md
----
-
----
----
-# Convolutional layers visualized
-- Layers deeper learn more advanced features. 
-- Final layer performs task specific operation
-- https://towardsdatascience.com/how-to-visualize-convolutional-features-in-40-lines-of-code-70b7d87b0030
-
----
----
-# Adverserial inputs
-- Follow naturally from being able to find high activations for inputs.
-- Make a stop sign read as a green light
-
-
----
-
-- House pricing example. 
-    - Many examples. Pricing + features. Something discoverable.
+- <a href="https://replicate.com/">"AI behind an API" - Replicate</a>
+- <a href="https://huggingface.co/">AI's Github - HuggingFaces</a>
 
 
 ---
 ---
 # Credits
 - https://udlbook.github.io/udlbook/
+
+
+<!-- 
+If you asked me for one book recommendation, this would be it.
+
+If you asked me for 2 book recommendations, I would recommend this one twice.
+-->
+
+---
+---
+# Future plans + my LinkedIn
+- Expanding outward towards the Generative AI stuff (specifically self-hosted stuff)
+- Every 3-4 weeks
+- More speakers ("How to clean/process a 100TB ML dataset")
+
+<div style="display:flex; justify-content: center;">
+  <img src="/public/common_profile_pic.jpg" width="35%">
+  <img src="/public/qr_code_linked_in.png" width="35%" style="margin-left:20%">
+</div>
+
