@@ -40,9 +40,13 @@ MNIST: https://en.wikipedia.org/wiki/MNIST_database
 Embedding viz: https://projector.tensorflow.org/
 -->
 
+
+
+
 ---
 src: ./pages/intro.md
 ---
+s
 
 ---
 src: ./pages/what_is_ai.md
@@ -361,11 +365,28 @@ backgroundSize: "90%"
 - Will act to `Regularize` the Model's surface (make it smoother), but having high loss if we overfit vs the underlying distribution
   - Model should be fairly uncertain given the data sparsity
 
+
+---
+---
+
+# Our toolbox
+- Python - Super popular, widely taught, very natural programming language. Huge library of useful stuff. Downside: slow!
+  - numpy - Highly optimized CPU-based math operations
+  - pandas - Data exploration
+  - matplotlib - Graphing
+  - pytorch - GPU based math operations, NN specifics, automatic gradient calculations (it handles our calculus)
+- Jupyter
+  - Program of the year like 10 years ago
+  - More convenient than pure code
+  - "Notebook" concept from laboratory
+  - Google Colab
+
 ---
 ---
 
 # MNIST w/ dense NN
 - https://github.com/mikeboensel/AI_Course/blob/main/slides/lecture1/_notebooks/mnist/mnist_pytorch.ipynb
+- <a href="https://adamharley.com/nn_vis/">Incredible visualizations of MNIST Model</a>
 
 <!-- NFL Draft modeling -- https://github.com/nflverse/nflverse-data/releases  https://www.pro-football-reference.com/draft/2002-combine.htm -->
 
