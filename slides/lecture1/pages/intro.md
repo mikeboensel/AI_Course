@@ -57,8 +57,20 @@ image: /public/mission-impossible.jpg
 
 
 <!--
+- Everyone feels dumb in this field. TBH I think its poorly understood even by experts. 
+- If you have a question, chances are other people do.
+- Encourage you to ask. 
+
 - Too often things are taught academically to be 100% technically accurate
     - Taught by people who are experts in the field. 
-    - I have a different approach. Get 90% of the meaning. Fill it in later. Explain it in a way that rather than saying "Goddam that guy is smart" its more like "Why didn't I get into engineering. A monkey could do this". 
-        - There is OFC more to this than I'm initially discussing, but I think its hugely helpful to start from a place of "Oh, ok, I get what you're doing and where you're going" vs "I don't know any of those words. I'm not even sure what the point of this is, I'm drowing in terminology"
+    - I'm not an expert.
+    - Just want a solid intuition.
+    - Approach (to this and SW in general):
+      - Explain it in a way that rather than saying "Goddam that guy is smart" its more like "Why didn't I get into engineering. A monkey could do this". 
+      - A bit reductionist. 
+        - OFC more to this than I'm mentioning 
+        - Helpful to start from a place:
+          "Oh, ok, I get what you're doing and where you're going" 
+            vs 
+          "I don't know any of those words. I'm not even sure what the point of this is, I'm drowing in terminology"
  -->
