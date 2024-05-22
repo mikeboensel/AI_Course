@@ -61,22 +61,100 @@ src: ./pages/key_ideas_of_ai.md
 ---
 
 ---
+layout: center
 ---
-# NN Introduction
-- Can learn any f(x) (Universal Approximation Theorem)
+# Neural Network Introduction
+
+<!--
+I want to start by giving us solid theoretical underpinnings.
+
+That said, when I was younger I read a book.
+-->
+
+---
+layout: image
+image: /public/fermat_last_theorem_book.jpg
+backgroundSize: "35%"
+---
+
+<!--
+Mathematical "Who dun it". Great mystery surrounding a mathematician named Fermat.
+-->
+
+---
+layout: image
+image: /public/fermat_last_theorem.jpg
+backgroundSize: "85%"
+---
+
+<!--
+- Thousands of pages of manuscripts. 
+- Presented a result, claimed a proof, did not provide it
+  - A marvelous proof
+- No one can figure it out for 100s of years
+- Brilliant minds
+- $1M prize for solving (Millenium Prize Problem, 7 most complex outstanding mathematical problem)
+
+-->
+
+---
+layout: image
+image: /public/fermat_last_theorem_solver.jpg
+backgroundSize: "85%"
+---
+<!--
+- Finally, this guy comes along.
+- Look at him, Truly a mathematician's mathematician.
+  - Hair
+  - Glasses
+  - Even the sweater!
+  - This guy does math!
+
+- Creates a proof so complex, using math that only a handful of people in the world know. 
+- Work can't be checked by mere mortals.
+- Is it solved, is it not? More compelling than I'm making it sound
+
+Ok, so Fermat probably didn't have a proof.
+-->
+
+---
+---
+# Universal Approximation Theorem
+  - Neural Networks can learn any f(x)
+
+<v-click>
+<img src="/public/trust_me_bro.jpg" width="50%"  style="margin-left:25%; margin-top:5%">
+</v-click>
+
+<!--
+My version:
+"There is a proof that exists, a marvelous proof, but I'm too dumb to explain it." 
+Look it up if you're interested.
+I'm sold, I don't need to check their work.
+-->
+
+---
+layout: image-right
+image: /public/line_equation.jpg
+backgroundSize: "85%"
+---
+# How?
 - Remember lines from grade school math? That's 90% of what we're doing here. 
-- <img src="/public/line_equation.jpg" width="45%">
-- Seems too simple? **We're going to use a lot of them!**
+- Seems too simple? 
+  - **We're going to use a lot of them!**
 
 ---
 ---
 # Core operations
+<v-clicks depth="3">
+
 - Multiplication
 - Addition
 - 2 things that sound more complicated than they are:
   1. A non-linearity (aka `Activation f(x)`)
   2. Calculus
 <img src="/public/calculus.webp" width="39%">
+</v-clicks>
 
 ---
 ---
@@ -107,20 +185,26 @@ src: ./pages/key_ideas_of_ai.md
 </div>
 
 ---
----
+
 # Easy example
 <img src="/public/calculus/integration_example.png" width="149%">
+
+<!--
+- velocity * time =  distance traveled
+- slope of velocity = acceleration
+-->
 
 ---
 layout: image-right
 image: /public/calculus/3D_Scatter_with_Colormap.png
 backgroundSize: "95%"
 ---
-# Going interdimensional!
+# To infinity... and beyond!
 - We are limited to 3 dimensions, but math is not
 - Going to be using 100s of dimensions
 - Visualization is tough...
-- These don't have an easy interpretation all the time. Somewhat mindbending
+- These don't have an easy interpretation all the time. 
+  - Somewhat mindbending
 
 ---
 ---
@@ -131,8 +215,10 @@ backgroundSize: "95%"
 
 <!-- 
 Distance of 2 points, just the difference. 
+
 3 points = Triangle
->3 = Just extend triangle concept
+
+\>3 = Just extend triangle concept
 -->
 
 ---
@@ -158,8 +244,9 @@ hide: False
 
 ---
 ---
-# How do?!?!
+# How do I break the lines?
 Non-linearities (aka Activation Functions)
+
 <img src="/public/nn_activation_functions_relu.jpg" width="75%">
 Ridiculously simple:
 ```python
@@ -173,33 +260,39 @@ def relu(input):
 ---
 ---
 # There must be other, more complicated ones!
-<img src="/public/nn_activation_functions.jpg" width="65%">
+<img src="/public/nn_activation_functions.jpg" width="65%" style="margin-left:15%">
 
 ---
 ---
 # Putting it all together
-<img src="/public/nn_non_linearity_1.jpg" width="60%">
+<img src="/public/nn_non_linearity_1.jpg" width="60%" style="margin-left:15%">
 
 ---
 ---
-# Traditional Stick and Ball
-<img src="/public/nn_architecture_stick_and_ball.jpg" width="60%">
+# Traditional Stick and Ball diagram
+<img src="/public/nn_architecture_stick_and_ball.jpg" width="60%" style="margin-left:15%">
 
 ---
 ---
-# Going Deeper
+# Getting stronger now!
 <img src="/public/nn_going_deeper1.JPG" style="margin-bottom:5px">
 
 <img src="/public/nn_going_deeper2.JPG">
+
+<!--
+We can increase the Model's "Power" or "Capacity" by adding more parameters
+- Can get those 2 ways:
+  - Siblings
+  - Children
+-->
 
 ---
 ---
 # Model capacity
 - More line segments allow for more accurate following of the data
-- Can get those 2 ways:
-  - Siblings
-  - Children
-<img src="/public/nn_deeper_are_more_efficient.JPG">
+- Deeper networks tend to be more efficient
+
+<img src="/public/nn_deeper_are_more_efficient.JPG" width="80%" style="margin-left:7%">
 
 
 
@@ -313,13 +406,13 @@ backgroundSize: "95%"
 
 ---
 ---
-# We want to learn quickly
+# We want to learn quickly, but not too quickly
 <img src="/public/grad_descent/grad_descent_speed.png">
 
 ---
 ---
 # Remember the path is not likely to be straightforward
-<img src="/public/grad_descent/grad_descent_3d.JPG">
+<img src="/public/grad_descent/grad_descent_3d.JPG" style="margin-left:15%">
 
 ---
 ---
@@ -327,7 +420,7 @@ backgroundSize: "95%"
 - Holding out data for testing/validation is important
 - Simulates the underlying reality that we almost always have insufficient data to know the true underlying distribution (the "World")
 - Model is generally over-parametericized, very "powerful" relative to the problem. 
-<img src="/public/underfit_overfit_tradeoff.jpg" width="70%">
+<img src="/public/underfit_overfit_tradeoff.jpg" width="70%" style="margin-left:15%">
 
 <!-- - Can easily just memorize the training examples (vs learning good features that will broadly generalize)
 - Why do we start like this? Because it would suck to do a whole bunch of training only to find out we don't have a powerful enough model. Err on side of caution here. 
@@ -491,7 +584,8 @@ src: ./pages/gpus.md
 - Make a stop sign read as a green light
 
 
-----------------------
+---
+
 - House pricing example. 
     - Many examples. Pricing + features. Something discoverable.
 
