@@ -40,186 +40,514 @@ MNIST: https://en.wikipedia.org/wiki/MNIST_database
 Embedding viz: https://projector.tensorflow.org/
 -->
 
+
+
+
 ---
 src: ./pages/intro.md
 ---
+s
 
 ---
 src: ./pages/what_is_ai.md
 ---
 
 ---
-# Common Sense isn't very common
-- Instructing a machine is hard. Humans are bad at considering a state space or the algorithm they use to navigate it. May not even be able to describe (or know) how to find a solution.
-- Consider how much effort/time/expense goes into training a new hire. Its a ton. 
-- A new hire is DRAMATICALLY smarter than a computer. 
-- Computers are dumb. Don't mistake working quickly with intelligence
-- They're equally happy to quickly shoot themselves in the foot repeatedly.
-- They do anything you instruct them to (regardless of consequences)
+src: ./pages/sw_overlap_bouncer_ex.md
+---
+
+---
+src: ./pages/key_ideas_of_ai.md
+---
+
+---
+layout: center
+---
+# Neural Network Introduction
+
+<!--
+I want to start by giving us solid theoretical underpinnings.
+
+That said, when I was younger I read a book.
+-->
+
+---
+layout: image
+image: /public/fermat_last_theorem_book.jpg
+backgroundSize: "35%"
+---
+
+<!--
+Mathematical "Who dun it". Great mystery surrounding a mathematician named Fermat.
+-->
+
+---
+layout: image
+image: /public/fermat_last_theorem.jpg
+backgroundSize: "85%"
+---
+
+<!--
+- Thousands of pages of manuscripts. 
+- Presented a result, claimed a proof, did not provide it
+  - A marvelous proof
+- No one can figure it out for 100s of years
+- Brilliant minds
+- $1M prize for solving (Millenium Prize Problem, 7 most complex outstanding mathematical problem)
+
+-->
+
+---
+layout: image
+image: /public/fermat_last_theorem_solver.jpg
+backgroundSize: "85%"
+---
+<!--
+- Finally, this guy comes along.
+- Look at him, Truly a mathematician's mathematician.
+  - Hair
+  - Glasses
+  - Even the sweater!
+  - This guy does math!
+
+- Creates a proof so complex, using math that only a handful of people in the world know. 
+- Work can't be checked by mere mortals.
+- Is it solved, is it not? More compelling than I'm making it sound
+
+Ok, so Fermat probably didn't have a proof.
+-->
 
 ---
 ---
-# Fundamental problem of Software Engineering
-- The state space under consideration for everything is big. 
-- Unlikely to anticipate it all.
-- Unlikely that unanticipated situations will be handled in a satisfactory way (Murphy's Law)
-  - >The airplane's control SW ran into an unexpected scenario. We're now going to be there 30 minutes earlier.
-    - Has never happened.
-  - <img src="/public/airline_announcement.webp" width="20%">
+# Universal Approximation Theorem
+  - Neural Networks can learn any f(x)
 
-  - Most likely going to crash, because disorder is the fundamental state of the world
+<v-click>
+<img src="/public/trust_me_bro.jpg" width="50%"  style="margin-left:25%; margin-top:5%">
+</v-click>
 
-
----
----
-# I thought we were talking about AI...
-- Bear with me, on this sojourn into software. It will become obvious later why I'm equating the 2.
-- The business of writing SW, is the business of custom **function creation**.
-<img src="/public/function_creator.webp" width="50%" style="margin-left:25%">
+<!--
+My version:
+"There is a proof that exists, a marvelous proof, but I'm too dumb to explain it." 
+Look it up if you're interested.
+I'm sold, I don't need to check their work.
+-->
 
 ---
 layout: image-right
-image: "/public/robot_bouncer.webp"
+image: /public/line_equation.jpg
+backgroundSize: "85%"
 ---
-
-# Bouncer example
-- Task: Don't allow anyone through the door unless they are of age.
-    - Sounds simple. Let's try to formalize it.
-      - Don't let anyone thru the door if the date string on their driver's license doesn't indicate their age >= 21.
-      - <img src="/public/drivers_licence.webp" width="70%">
-    - 12/1/1985 ✅
-    - 5/22/2010 ❌
----
----
-# Bouncer example gets hairier    
-- Which IDs? Other states? https://www.businessinsider.com/what-drivers-license-looks-like-in-every-state
-  - Where to find the DOB information? Most call it `DOB`, but label might be above OR to the left of, or below
-  - God help us... Passports? Foreign IDs?
-- Someone shows up with a 2 digit year "3/1/12" are they 112? Or 12?
-- We stop people from entering the door w/o checking ID
-    - What about the window? Or another door? Task really doesn't just involve this door, more general security...
-- Not even touching on teenagers acting w/ malice...
-- Tremendous amount of knowledge about the world must be encoded for this to succeed. 
-- Many failure modalities
-
----
-layout: center
----
-# If you had to pick 3 key ideas to explain ML...
-
-<!-- Useful exercise. Can we condense this down to some central kernel?-->
----
----
-# Key 1: The world is full of f(x)'s and we can discover them
-- Neural Nets are f(x) approximators and the world is full of functions
-- Quick f(x) definition - Equation that takes an input and gives some output
-  - F(x) for pricing a house, picking an NBA draftee, writing a letter, even art
-  - <img src="/public/nfl_draft.webp" width="20%">
-  - <img src="/public/nfl_draft.jpg" width="20%">
-- If a human can do it, I take that as a prior indicating that it is a task that can be solved algorithmically (may not be able to state what the algo is, but it exists and can be discovered)
-    - Somewhat philosophical. Some people believe in some greater, undefined quantity ("spirit/essence"). I don't. I think we're all bounded by the laws of nature and math. I can't prove it, but I've yet to see anyone prove the other case either. So that's my bias. You may not believe everything is this way, but I think we can agree most things are.
+# How?
+- Remember lines from grade school math? That's 90% of what we're doing here. 
+- Seems too simple? 
+  - **We're going to use a lot of them!**
 
 ---
 ---
-# Software 2.0
-- Andrej Karpathy blog post: https://karpathy.medium.com/software-2-0-a64152b37c35
-- Highly related effort to what I've spent my career on (SW Dev)
-  - Exploring a large State space
-  - Attempting to anticipate different scenarios and respond intelligently
-- <img src="/public/software2.0.webp" width="30%">
-- 2.0 implies a replacement. I'm less sure of that. Certainly a different way w/ radically different trade-offs.
-- <img src="/public/software2.0_2.webp" width="30%">
+# Core operations
+<v-clicks depth="3">
 
+- Multiplication
+- Addition
+- 2 things that sound more complicated than they are:
+  1. A non-linearity (aka `Activation f(x)`)
+  2. Calculus
+<img src="/public/calculus.webp" width="39%">
+</v-clicks>
 
 ---
 ---
-# Key 2: Deep underlying structure exists in the universe
-- We can interpolate over this structure
-  - What is interpolation?
-    - Start point -> End point in a space we performing a blending
-<div grid="~ cols-2 gap-2" m="t-2">
-<img src="/public/interpolation_linear.avif" width="60%">
-<img src="/public/interpolation_rgb_color_wheel.jpg" width="60%">
+# Calculus simplified
+- Simple concepts, made hard
+- `"What if I have a wiggly line?"`
+- Advanced area finding 
+<div style="display:flex; justify-content: center;">
+<img src="/public/calculus/area-of-a-Trapezoid.png" width="39%">
+<img src="/public/calculus/riemann_sum_convergence.png" style="margin-left:30px" width="39%">
 </div>
-  
-
-<!-- 
-latent spaces/embeddings, model merging (a task dimension)
--->
 
 ---
 ---
-# Interpolation Station
-- Even things that might not seem interpolatable
-    - Ex: human faces https://thispersondoesnotexist.com/
-- Me vs Lebron James vs Yo-yo Ma
+# Calculus simplified (cont.)
+- Advanced slope calculations
+<div style="display:flex; justify-content: center;">
+<img src="/public/calculus/grad_descent_slope_calculation.jpg" width="49%">
+<img src="/public/calculus/derivative.webp" style="margin-left:30px" width="49%">
+</div>
 
-| Person    | Height | Level of Fame | Basketball-ness | 
-| :--------: | :-------: | :-------: | :-------: | 
-| <img src="/public/common_profile_pic.jpg" width="100px">  | 8 | 10 | 10 |
-| <img src="/public/lebron_james.avif" width="100px"> | 6 | 0 | 3 |
-| <img src="/public/yoyo_ma.jpg" width="100px">   | 4 | 6 | 0 |
+---
+---
+# Why is this useful?
+<div style="display:flex; justify-content: center;">
+<img src="/public/calculus/rocket.jpg" width="49%">
+<img src="/public/calculus/integration_differentiation_usage.png" style="margin-left:30px" width="49%">
+</div>
 
-- What are these dimensions?
-<style>
-  img{
-  /* text-align:center; */
-   margin-left:25%;
-  }
-</style>
+---
+
+# Easy example
+<img src="/public/calculus/integration_example.png" width="149%">
 
 <!--
-Lebron James is basketball. You might look at me and think "that guy probably played a long time ago for a little bit". Yoyo ma you assume would explode if he ever touched one.
-
-What are these dimensions? Unfortunately, rarely end up this clear cut in terms of "this dimension encodes this thing we understand".
-
- What range can they take? Lazily just put things on a 0-10 scale here. 
+- velocity * time =  distance traveled
+- slope of velocity = acceleration
 -->
 
 ---
-layout: center
-image: text-center
-title: ENHANCE
+layout: image-right
+image: /public/calculus/3D_Scatter_with_Colormap.png
+backgroundSize: "95%"
 ---
+# To infinity... and beyond!
+- We are limited to 3 dimensions, but math is not
+- Going to be using 100s of dimensions
+- Visualization is tough...
+- These don't have an easy interpretation all the time. 
+  - Somewhat mindbending
 
-<div style="text-align:center">
-<span style="color:blue">ENHANCE!</span>
+---
+---
+# Basic math still works in high dimensional space!
+- Can't directly visualize (more on this later)
+- Trig distance/angle ideas still hold
+<img src="/public/calculus/pythagorean.png" width="60%">
 
-https://projector.tensorflow.org/
+<!-- 
+Distance of 2 points, just the difference. 
+
+3 points = Triangle
+
+\>3 = Just extend triangle concept
+-->
+
+---
+layout: image-right
+image: /public/nn_linear_fitting.jpg
+backgroundSize: "95%"
+---
+# Given data, we can fit lines!
+- What's a good fit?
+- Define a Loss Function
+- Adjust the line until we are happy
+
+---
+layout: center
+hide: False
+---
+# Great, but real life isn't a series of lines!
+
+---
+---
+# But it could be a series of small line segments (a piecewise function)
+<img src="/public/nn_non_linearity_2_fitting.JPG" width="75%">
+
+---
+---
+# How do I break the lines?
+Non-linearities (aka Activation Functions)
+
+<img src="/public/nn_activation_functions_relu.jpg" width="75%">
+Ridiculously simple:
+```python
+def relu(input):
+  if input > 0:
+    return input
+  else:
+    return 0
+```
+
+---
+---
+# There must be other, more complicated ones!
+<img src="/public/nn_activation_functions.jpg" width="65%" style="margin-left:15%">
+
+---
+---
+# Putting it all together
+<img src="/public/nn_non_linearity_1.jpg" width="60%" style="margin-left:15%">
+
+---
+---
+# Traditional Stick and Ball diagram
+<img src="/public/nn_architecture_stick_and_ball.jpg" width="60%" style="margin-left:15%">
+
+---
+---
+# Getting stronger now!
+<img src="/public/nn_going_deeper1.JPG" style="margin-bottom:5px">
+
+<img src="/public/nn_going_deeper2.JPG">
+
+<!--
+We can increase the Model's "Power" or "Capacity" by adding more parameters
+- Can get those 2 ways:
+  - Siblings
+  - Children
+-->
+
+---
+---
+# Model capacity
+- More line segments allow for more accurate following of the data
+- Deeper networks tend to be more efficient
+
+<img src="/public/nn_deeper_are_more_efficient.JPG" width="80%" style="margin-left:7%">
+
+
+
+---
+---
+# Matrices
+- As a programmer, how do you represent a bunch of variables?
+- Calling out each one? Nope
+```python
+w_0 = 1.1
+w_1 = .043
+# ... Great suffering later
+w_99012 = 3.30
+```
+- A list? Better.
+```python
+w = [1.1, .043,...,3.30]
+```
+- List of lists => Matrix. Better still
+```python
+w = [[1.1, .043,...,3.30], [6.54, ....]]
+```
+- In practice, having these in source would be terrible, so we have serialized model files
+```python
+model.load_state_dict(torch.load(PATH))
+```
+
+---
+---
+# Matrices (2)
+
+- Well studied mathematics around this (Linear Algebra)
+- Lends itself to parallel operations (like multiplying/adding a lot)
+- http://matrixmultiplication.xyz/
+- https://www.intmath.com/matrices-determinants/matrix-addition-multiplication-applet.php
+
+---
+---
+# Tensors
+- WTF is this?
+<img src="/public/tensor_def.jpg" width="75%">
+
+---
+---
+# Wow, lots of math... must be important
+Better learn what this is...
+
+<div style="display:flex; justify-content: center; margin-bottom:10px">
+<img src="/public/tensorflow.jpg" width="35%">
+<img src="/public/tensor_TPU.jpg" width="25%" style="margin-left:20px">
+</div>
+
+
+<img src="/public/physics_envy.jpg">
+
+---
+---
+# How do we fit our line segments?
+2 step process:
+1. How well are we doing? 
+    - Measured via running our Data thru a Loss f(x) (aka Objective f(x))
+2. Let's improve! 
+    - Gradient Descent
+
+<!--
+This is a very simple, very nice Loss f(x). Real ones will be many dimensional, not smoothe, etc.
+-->
+
+---
+---
+# How good is our current Model?
+- How to measure?
+  - Depends on what the Model is targeting.
+  - Categorical
+<img src="/public/grad_descent/alexnet_predictions.png" width="50%">
+
+---
+layout: image-right
+image: /public/nn_linear_fitting.jpg
+---
+# Numeric output is simpler 
+- Sum of errors?
+  - +/- cancel. Bad property!
+- Sum of absolute errors?
+  - Linear cost, less effective in practice
+- Sum of squared errors?
+  - Widely used
+
+---
+layout: image-right
+image: /public/grad_descent/smoothe_vs_non_smoothe.jpg
+backgroundSize: "95%"
+---
+# Loss Landscape is likely complex
+- From https://www.telesens.co/loss-landscape-viz/viewer.html 
+
+---
+---
+# Gradient Descent
+<img src="/public/grad_descent/grad_descent_simple.JPG" width="75%">
+
+
+---
+---
+# Gradient Descent (cont.)
+
+<div style="display:flex; justify-content: center;">
+<img src="/public/grad_descent/grad_descent_detailed.png" width="45%">
+<img src="/public/grad_descent/grad_descent_slope_calculation.JPG" width="45%" style="margin-left:20px">
 </div>
 
 ---
 ---
-# Key 3: Subsequent learning is easier
-- Intuitively makes sense to us. Magnus Carlsen - Chess. If I told you he was also really good at checkers, backgammon, etc. You'd be pretty accepting of it.
-- `Transfer learning` -- makes sense because learning just means discovering some underlying structure about the universe. If you know some, easier to acquire others (vs being random unitialized)
-So...
-- There's an underlying structure to the universe that
-    - Can be learned
-    - Can be interpolated over
+# We want to learn quickly, but not too quickly
+<img src="/public/grad_descent/grad_descent_speed.png">
 
 ---
 ---
-# NN Introduction
-- Can learn any f(x) (Universal Approximation Theorem)
-- Uses multiplication, addition, and a non-linearity to make predictions (sometime a little more, but pretty simple!)
-- Uses a loss function and calculus to train
-## MNIST w/ dense NN
-    - Show MNIST, explain how a labeled dataset works
-    - Graph losses
-## NFL Draft modeling -- https://github.com/nflverse/nflverse-data/releases  https://www.pro-football-reference.com/draft/2002-combine.htm
+# Remember the path is not likely to be straightforward
+<img src="/public/grad_descent/grad_descent_3d.JPG" style="margin-left:15%">
 
 ---
 ---
-# Datasets/Contests/Leaderboards
-- What gets measured gets done
+# One last thing, then code!
+- Holding out data for testing/validation is important
+- Simulates the underlying reality that we almost always have insufficient data to know the true underlying distribution (the "World")
+- Model is generally over-parametericized, very "powerful" relative to the problem. 
+<img src="/public/underfit_overfit_tradeoff.jpg" width="70%" style="margin-left:15%">
+
+<!-- - Can easily just memorize the training examples (vs learning good features that will broadly generalize)
+- Why do we start like this? Because it would suck to do a whole bunch of training only to find out we don't have a powerful enough model. Err on side of caution here. 
+- Model really shouldn't be very confident in any of its predictions as data is always sparse at high dimensionality
+- Overfit/Underfit  -->
+
+---
+---
+# Curse of dimensionality
+- All datasets is sparse at high dimensions
+- Our toy graphs are not representative
+<img src="/public/curse_of_dimensionality.png" width="100%">
+- https://www.visiondummy.com/2014/04/curse-dimensionality-affect-classification/
+
+
+---
+layout: image-right
+image: /public/contortionist.jpg
+backgroundSize: "90%"
+---
+# Model will contort itself
+- Just trying to hit all datapoints
+- Doesn't look so bad in our low-D graphs
+- Reality is its making these complex shapes based off very few examples
+<img src="/public/underfit_overfit_tradeoff.jpg" width="50%">
+
+
+
+
+---
+---
+# Test/Validation/Train split
+<img src="/public/test_train_validation_split.webp" width="100%">
+
+- Will act to `Regularize` the Model's surface (make it smoother), but having high loss if we overfit vs the underlying distribution
+  - Model should be fairly uncertain given the data sparsity
+
+
+---
+---
+
+# Our toolbox
+- Python - Super popular, widely taught, very natural programming language. Huge library of useful stuff. Downside: slow!
+  - numpy - Highly optimized CPU-based math operations
+  - pandas - Data exploration
+  - matplotlib - Graphing
+  - pytorch - GPU based math operations, NN specifics, automatic gradient calculations (it handles our calculus)
+- Jupyter
+  - Program of the year like 10 years ago
+  - More convenient than pure code
+  - "Notebook" concept from laboratory
+  - Google Colab
+
+---
+---
+
+# MNIST w/ dense NN
+- https://github.com/mikeboensel/AI_Course/blob/main/slides/lecture1/_notebooks/mnist/mnist_pytorch.ipynb
+- <a href="https://adamharley.com/nn_vis/">Incredible visualizations of MNIST Model</a>
+
+<!-- NFL Draft modeling -- https://github.com/nflverse/nflverse-data/releases  https://www.pro-football-reference.com/draft/2002-combine.htm -->
+
+
+---
+---
+# It's ovah!?!
+- What you just learned, a Neural Net with Fully Connected, can learn anything
+- So we're done, right? Pack it up, call it a day
+- Theory is great in theory
+
+<video width="320" height="240" controls style="margin-left:30%">
+  <source src="/public/vince_carter_its_over.mp4" type="video/mp4">
+</video>
+
+---
+---
+# You need a budget
+Potential limiting factors:
+- Transistor count
+- Training time
+- Power usage
+- Total data
+  - We can only collect so much and want it to generalize
+- Model size (parameter count)
+- Etc.
+
+<!-- ::right::
+<img src="/public/you_need_a_budget.jpg" width="95%"> -->
+
+---
+---
+# The importance of Datasets
 - Collection/labeling of data is a very expensive endeavor
 - Even collection of "unlabeled data" is expensive
     - Scraping, storage
 - Having readily available datasets for different domains facilitates research
-- MNIST - https://huggingface.co/datasets/mnist
-- ImageNET - https://huggingface.co/datasets/imagenet-1k
+<div style="display:flex; justify-content: center;">
+<img src="/public/datasets/mnist_overview.jpg" width="35%">
+<img src="/public/datasets/imagenet_banner.jpg" width="35%">
+<img src="/public/datasets/the_pile.png" width="30%">
 
+</div>
+
+---
+layout: image-right
+image: /public/elo_system.jpg
+backgroundSize: "90%"
+---
+# What gets measured gets done
+- Competitions encourage regular progress
+- Contests around different datasets
+- Metrics can be hard! Accuracy used to be enough
+- Most of the progress recently has been in LLMs, more difficult to score/setup challenges
+    - Interesting approach from <a href="https://arena.lmsys.org/"> Chatbot arena</a> 
+    - ELO system and head to head contests
+
+---
+layout: image-right
+image: /public/elo_system2.png
+backgroundSize: "100%"
+---
+# Elo in detail
+- TLDR; Beat higher rated opponents, move up quickly
+
+
+<!-- Love a good inscrutable graph! It must be telling me something really important, let's stare at it until it gives up its secrets.
+-->
 
 ---
 layout: image
@@ -231,11 +559,38 @@ title: Huggingfaces Overview
 
 ---
 ---
-# Measuring is getting harder...
-- Most of the progress recently has been in LLMs, more difficult to score/setup challenges
-    - Interesting approach from https://arena.lmsys.org/ (Chatbot arena) -- ELO system and head to head contests
+# AlexNet + Convolutions + GPUs
+- ImageNet
+- Jumpstarted the vision/image processing community. Huge advance. Subsequent progress.
+- Powerful inductive bias
+  - Nearby pixels in an image have a relationship to each other 
+  - Fully connected would not assume anything like this, would have to discover
+
+---
+src: ./pages/gpus.md
+---
+
+---
+---
+# Convolutional layers visualized
+- Layers deeper learn more advanced features. 
+- Final layer performs task specific operation
+- https://towardsdatascience.com/how-to-visualize-convolutional-features-in-40-lines-of-code-70b7d87b0030
+
+---
+---
+# Adverserial inputs
+- Follow naturally from being able to find high activations for inputs.
+- Make a stop sign read as a green light
 
 
-----------------------
+---
+
 - House pricing example. 
     - Many examples. Pricing + features. Something discoverable.
+
+
+---
+---
+# Credits
+- https://udlbook.github.io/udlbook/

@@ -1,4 +1,3 @@
-
 ---
 layout: image
 image: /public/DartmouthWorkshop.JPG
@@ -7,6 +6,13 @@ backgroundSize: "50%"
 # What is AI?
 Coined in the 50s, at a Dartmouth Summer Workshop
 
+<!--
+You look at a picture like this:
+- B/W old guys in suits
+OFC these are the august genius who started this. That's Claude Shannon, mathematical demi-god.
+Which is why I included the next slide:
+
+-->
 
 ---
 layout: image
@@ -18,6 +24,10 @@ backgroundSize: "55%"
 <style>
   h1{text-align:center;}
 </style>
+
+<!--
+At one point just a bunch of geeky looking people running around Harvard.
+-->
 
 ---
 ---
@@ -47,55 +57,84 @@ backgroundSize: "75%"
 ---
 
 ---
+layout: image
+image: /public/venn_diagram_ai.JPG
+backgroundSize: "83%"
 ---
-# In practice
-- Nebulous umbrella term now. Basically, **computer doing something useful and impressive**.
-- I'd argue its also a moving target.
-- Ex: Spellcheck, probably revolutionary when initially released. Not particularly smart. 
-- <img src="/public/spellcheck.JPG" width="300px">
+# Umbrella term
+
+<!-- Inner elements are normally some mix of: 
+- Stats
+- Computer Science
+- Machine Learning
+- Neural Networks
+- Deep Learning
+- "Big Data"
+- Data Science
+A fair amount of these terms are themselves vague catch-alls.
+-->
 
 ---
 ---
-# Any sufficiently advanced tech is indistinguishable from magic
-
-<div style="display:flex;justify-content: space-around;">
-<img src="/public/arthur_c_clark2.jpg" width="30%" style="margin:auto">
-<img src="/public/arthur_c_clark.jpg" width="20%" style="margin:auto">
-
-</div>
-
----
-layout: center
-
----
-# Any tech, regardless of how advanced, becomes familiar and underappreciated with increasing use.
-
-<!-- Human nature. Hedonic treadmill. A legacy of our evolution. "Give me more, give me better, now!" Strive/desire more, laziness/lack of greed not rewarded.
-Buddhism/self-mastery. Not our fault, but must temper -->
----
----
-# AI is "the new hotness"
+# In practice: AI is "the new hotness"
 - A way to juice your stock price. 
 - Mentions of AI during investor conference calls:
 <img src="/public/earning_call_ai_mentions.png" height="300px">
 
 ---
-layout: image
-image: /public/venn_diagram_ai.JPG
-backgroundSize: "75%"
 ---
-# Umbrella term
+# A moving target
+- Basically, **a computer doing something useful and impressive**.
+- Ex: Spellcheck, probably revolutionary when initially released. Now, not so much.
+- <img src="/public/spellcheck.JPG" width="70%">
 
-<!-- Some mix of Stats, Computer Science, Machine Learning, Neural Networks, Deep Learning, "Big Data", Data Science
-A fair amount of these terms are themselves vague catch-alls.
+<!--
+Simple enough algo:
+- For each word
+- Check if in dictionary
+- If not, add a red squiggle below
+BONUS: Add suggestions on hover via something like nearest Levenstein distance
+  - The # of single-character edits (insertions, deletions or substitutions) required to change one word into the other. 
+
+Intentionally picked something that the audience would find trite to make a point. 
+- Been in this field a while, I can remember things that blew my mind at the time:
+  - Google auto-complete
+  - GMail updating w/o page refreshes (AJAX)
+- All common place/unexceptional now. Revolutionary at the time. This is the course of all technology
 
 -->
 
----    
+---
+---
+# Clarke's Law
+
+> Any sufficiently advanced tech is indistinguishable from magic
+
+<div style="display:flex;justify-content: space-around;">
+    <img src="/public/arthur_c_clark2.jpg" width="30%" style="margin:auto">
+    <img src="/public/arthur_c_clark.jpg" width="20%" style="margin:auto">
+</div>
+
+---
+layout: center
+---
+# Any tech, regardless of how advanced, becomes familiar and underappreciated with increasing use!
+<!-- I'd like to propose my own Law.
+
+Falls out naturally from human nature. -->
+
+---
+src: ./hedonic_treadmill.md
+hide: false
+---
+
+---
+hide: false
 ---
 # We will focus on Machine Learning
-- The main driver of recent progress.
+- AI is a buzzword
+- ML has been the main driver of recent progress.
 - Best simple definition: 
-    - ### Learning from data examples
+    - ### Learning an underlying structure from limited data examples
 
 Let's examine why this is interesting
