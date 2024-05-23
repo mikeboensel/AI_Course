@@ -179,6 +179,7 @@ backgroundSize: "85%"
 ---
 ---
 # Why is this useful?
+Allows us to answer "How much of something?" and "How quickly is the amount changing?"
 <div style="display:flex; justify-content: center;">
 <img src="/public/calculus/rocket.jpg" width="49%">
 <img src="/public/calculus/integration_differentiation_usage.png" style="margin-left:30px" width="49%">
