@@ -141,3 +141,15 @@ Reasonable compliance: Not ever look in and have it look like there's a high sch
 
 So going to want to support a ton of different ID types because a default NO policy would be perfectly compliant, but no revenue. Shade toward being overly permissive.
 -->
+
+---
+layout: image
+image: "/public/chatgpt_understands_memes_carpooling.JPG"
+
+---
+# Meanwhile... ChatGPT understand humor...
+
+<!--
+Think about all the Context and understanding you need of the world to understand this.
+
+-->
