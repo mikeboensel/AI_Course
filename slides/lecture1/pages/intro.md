@@ -9,7 +9,7 @@ backgroundSize: "90%"
   - (Standard disclaimer... views not endorsed by them)
 <br>
 <br>
-- >Is this going to take my job yet?"
+- Is this going to take my job yet?"
   - 2010 - Pandora, other recommender systems
   - 2015 - GANs
   - 2022 - Transformer-based
@@ -46,17 +46,14 @@ layout: image-right
 image: /public/mission-impossible.jpg
 ---
 # Talk Goals: Something for everyone
-- Threading a needle here
+
 - Newbie accessible
   - High level understanding
-    - Details might be overwhelming
   - A roadmap to learn
 
-- Something for those already in the field
-  - Insights
-  - Resources you haven't seen before
+- Practitioners
+  - New insights/resources
   - (Hopefully)
-
 
 <!--
 - Everyone feels dumb in this field. TBH I think its poorly understood even by experts. 
@@ -76,3 +73,15 @@ image: /public/mission-impossible.jpg
             vs 
           "I don't know any of those words. I'm not even sure what the point of this is, I'm drowing in terminology"
  -->
+
+
+---
+layout: image-right
+image: /public/diffusion_to_bananelemons.gif
+---
+
+# What we're building towards
+
+- Generative AI
+- Theory/foundation is needed to de-mystify
+- <a href="https://adamharley.com/nn_vis/mlp/3d.html">You will understand this in one hour</a>

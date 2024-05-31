@@ -127,8 +127,8 @@ Ties into:
 
 | Person    | Height | Level of Fame | Basketball-ness | 
 | :--------: | :-------: | :-------: | :-------: | 
-| <img src="/public/common_profile_pic.jpg" width="100px">  | 8 | 10 | 10 |
-| <img src="/public/lebron_james.avif" width="100px"> | 6 | 0 | 3 |
+| <img src="/public/common_profile_pic.jpg" width="100px">  | 8 | 10 | 3 |
+| <img src="/public/lebron_james.avif" width="100px"> | 6 | 0 | 10 |
 | <img src="/public/yoyo_ma.jpg" width="100px">   | 4 | 6 | 0 |
 
 - What are these dimensions?

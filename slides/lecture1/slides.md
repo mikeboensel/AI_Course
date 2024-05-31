@@ -59,63 +59,11 @@ src: ./pages/sw_overlap_bouncer_ex.md
 ---
 src: ./pages/key_ideas_of_ai.md
 ---
-
+s
 ---
 layout: center
 ---
 # Neural Network Introduction
-
-<!--
-I want to start by giving us solid theoretical underpinnings.
-
-That said, when I was younger I read a book.
--->
-
----
-layout: image
-image: /public/fermat_last_theorem_book.jpg
-backgroundSize: "35%"
----
-
-<!--
-Mathematical "Who dun it". Great mystery surrounding a mathematician named Fermat.
--->
-
----
-layout: image
-image: /public/fermat_last_theorem.jpg
-backgroundSize: "85%"
----
-
-<!--
-- Thousands of pages of manuscripts. 
-- Presented a result, claimed a proof, did not provide it
-  - A marvelous proof
-- No one can figure it out for 100s of years
-- Brilliant minds
-- $1M prize for solving (Millenium Prize Problem, 7 most complex outstanding mathematical problem)
-
--->
-
----
-layout: image
-image: /public/fermat_last_theorem_solver.jpg
-backgroundSize: "85%"
----
-<!--
-- Finally, this guy comes along.
-- Look at him, Truly a mathematician's mathematician.
-  - Hair
-  - Glasses
-  - Even the sweater!
-  - This guy does math!
-
-- Creates a proof so complex, using math that only a handful of people in the world know. 
-- Work can't be checked by mere mortals.
-- Is it solved, is it not? More compelling than I'm making it sound
-
-Ok, so Fermat probably didn't have a proof.
--->
 
 ---
 ---
@@ -126,12 +74,6 @@ Ok, so Fermat probably didn't have a proof.
 <img src="/public/trust_me_bro.jpg" width="50%"  style="margin-left:25%; margin-top:5%">
 </v-click>
 
-<!--
-My version:
-"There is a proof that exists, a marvelous proof, but I'm too dumb to explain it." 
-Look it up if you're interested.
-I'm sold, I don't need to check their work.
--->
 
 ---
 layout: image-right
@@ -637,3 +579,6 @@ If you asked me for 2 book recommendations, I would recommend this one twice.
   <img src="/public/qr_code_linked_in.png" width="35%" style="margin-left:20%">
 </div>
 
+<!--
+https://www.meetup.com/boston-ai-ml-user-group/
+-->

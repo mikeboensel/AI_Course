@@ -6,7 +6,8 @@ image: /public/job_training.jpg
 # Common Sense isn't very common!
 <v-clicks depth="3">
 
-- Consider how much effort/time/expense goes into training a new hire. (A lot!)
+- Consider job training
+  - Huge time/effort investment
   - A new hire is DRAMATICALLY smarter than a computer.
 
 - Computers are dumb. 
@@ -40,11 +41,15 @@ State space description is hard!
 layout: image-right
 image: /public/airline_announcement.jpg
 ---
-# Fundamental problem of (Software) Engineering
-- The state space under consideration for everything is big. 
-- Unlikely:
-  - To anticipate all scenarios
-  - That unanticipated situations will be handled in a satisfactory way (Murphy's Law)
+# Fundamental problem of Engineering
+<v-clicks depth="2">
+
+1. The state space of the problem is huge.
+2. Unlikely to anticipate all scenarios.
+3. Unanticipated situations == disasters (Murphy's Law)
+4. Especially difficult in SWE (non-linearity is everywhere)
+
+</v-clicks>
 
 <!-- 
 The cartoon image on the right has never happened. It will never happen.
@@ -62,15 +67,16 @@ We're fighting Thermodynamics
   - So much work!
   - Something goes wrong, it doesn't lead to an improvement.
 
-Same thing in SW
-
+Same thing in SW, but to a greater extent.
+  - Non-linearity
+  - Can test the weight a table can take by just measuring a couple points (400 lbs... 500lbs... breaks)
+    - SW can't be sure about those intermediate points, could have crazy bad behavior based off conditional logic
 -->
 
 ---
 ---
-# I thought we were talking about AI...
-- Bear with me, on this sojourn into software. It will become obvious later why I'm equating the 2.
-- The business of writing SW, is the business of custom **function creation**.
+# I thought we were talking about AI/ML...
+- Software Development is custom **function creation**.
 <img src="/public/function_creator_1.webp" width="50%" style="margin-left:25%">
 
 ---
@@ -78,11 +84,11 @@ layout: image-right
 image: "/public/robot_bouncer.webp"
 ---
 # Bouncer example
-<v-clicks depth="3">
-
-- Task: Don't allow anyone through the door unless they are of age.
-
-- Sounds simple. Let's formalize it:
+<div v-click="+1">
+Task: Don't allow anyone through the door unless they are of age.
+</div>
+<div v-click="+2">
+Sounds simple. Let's formalize it:
 ```python
 age = get_age(id_image)
 if age >= 21:
@@ -90,19 +96,22 @@ if age >= 21:
 else:
   refuse()
 ```
-</v-clicks>
+</div>
 
-<div v-click="+2">
-  <v-clicks>
-
-  - <img src="/public/drivers_licence.webp" width="70%">
-  - 12/1/1985 ✅
-  - 5/22/2010 ❌
-  </v-clicks>
+<div v-click="+3">
+<img src="/public/drivers_licence.webp" width="70%">
+</div>
+<div v-click="+4">
+  12/1/1985 ✅
+</div>
+<div v-click="+5">
+  5/22/2010 ❌
 </div>
 
 
 <!-- Heavily stylized for entertainment purposes. Might be something more like a kiosk that takes an ID, opens door if appropriate. 
+
+Fairly low paying/low skill job.
 -->
 
 ---
@@ -114,19 +123,13 @@ else:
   - Where is DOB information? Left of label? Right? Above? 
   - Passports? Foreign IDs? God help us...
 
-- Someone shows up with a 2 digit year `3/1/12`... are they 112? Or 12? 
-
-- We stop people from entering the door w/o checking ID
-  - What about the window? Or another door? Task really doesn't just involve this door, more general security...
+- Someone shows up with a 2 digit year `3/1/12`... 
+  - Are they 12? <img src="/public/12_year_old.webp" width="10%" style="display:inline-block">
+  - Or 112? <img src="/public/112_year_old.webp"  width="10%" style="display:inline-block">
 
 - Not even touching on teenagers acting w/ malice...
 
 </v-clicks>
-
-<div v-click>
-<h2> Tremendous amount of knowledge about the world must be encoded for this to succeed. Many failure modalities!</h2>
-
-</div>
 
 
 <!--
@@ -143,8 +146,18 @@ So going to want to support a ton of different ID types because a default NO pol
 -->
 
 ---
+layout: center
+---
+# Tremendous amount of knowledge about the world must be encoded for this to succeed. 
+
+# Many failure modalities!
+
+
+
+---
 layout: image
 image: "/public/chatgpt_understands_memes_carpooling.JPG"
+backgroundSize: "65%"
 
 ---
 # Meanwhile... ChatGPT understand humor...
