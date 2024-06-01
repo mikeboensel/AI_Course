@@ -114,14 +114,27 @@ else:
 Fairly low paying/low skill job.
 -->
 
----
----
-# Bouncer example gets hairier    
-<v-clicks depth="2">
 
-- Which IDs? <a href="https://www.businessinsider.com/what-drivers-license-looks-like-in-every-state">Other states?</a>
-  - Where is DOB information? Left of label? Right? Above? 
-  - Passports? Foreign IDs? God help us...
+---
+---
+# Which IDs must be supported?
+
+<div style="display:flex; justify-content: center; gap:10px;   flex-wrap: wrap;
+">
+<img src="/public/dl_1.webp" width="30%" >
+<img src="/public/dl_2.webp" width="30%">
+<div style="height:0px; flex-basis:100%"></div>
+<img src="/public/dl_3.webp" width="30%">
+<img src="/public/dl_4.webp" width="30%">
+</div>
+
+<a href="https://www.businessinsider.com/what-drivers-license-looks-like-in-every-state">Other states?</a> Foreign IDs? Passports? More?
+
+
+---
+---
+# We need to also understand age    
+<v-clicks depth="2">
 
 - Someone shows up with a 2 digit year `3/1/12`... 
   - Are they 12? <img src="/public/12_year_old.webp" width="10%" style="display:inline-block">
@@ -131,6 +144,25 @@ Fairly low paying/low skill job.
 
 </v-clicks>
 
+---
+---
+# The real world is messy
+
+```python{1}
+age = get_age(id_image)
+if age >= 21:
+  allow()
+else:
+  refuse()
+```
+
+- That function `get_age` is pulling a lot of weight!
+  - Locate DOB
+  - Extract the info
+  - Compare with person in front of you
+  - Etc.
+
+# A tremendous amount of knowledge about the world must be encoded for this to succeed. 
 
 <!--
 All these will be required. 
@@ -145,14 +177,6 @@ Reasonable compliance: Not ever look in and have it look like there's a high sch
 So going to want to support a ton of different ID types because a default NO policy would be perfectly compliant, but no revenue. Shade toward being overly permissive.
 -->
 
----
-layout: center
----
-# Tremendous amount of knowledge about the world must be encoded for this to succeed. 
-
-# Many failure modalities!
-
-
 
 ---
 layout: image
@@ -160,9 +184,11 @@ image: "/public/chatgpt_understands_memes_carpooling.JPG"
 backgroundSize: "65%"
 
 ---
-# Meanwhile... ChatGPT understand humor...
+# Meanwhile... somehow... ChatGPT gets jokes...
+
 
 <!--
 Think about all the Context and understanding you need of the world to understand this.
 
+Clearly something here and its valuable. 
 -->

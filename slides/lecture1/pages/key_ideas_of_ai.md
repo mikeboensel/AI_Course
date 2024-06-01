@@ -1,7 +1,7 @@
 ---
 layout: center
 ---
-# If you had to pick 3 key ideas to explain ML...
+# How can we explain this?!? 3 key ideas...
 
 <!-- Useful exercise. Can we condense this down to some central kernel?-->
 ---
@@ -27,7 +27,7 @@ Equation that takes an input and gives some output
 ---
 # Functions can describe anything
 
-A bunch of coaches with whistles and windblowers are trying to discover the next Tom Brady.
+A bunch of coaches are trying to discover the next Tom Brady by measuring physical attributes.
 <div style="display:flex; justify-content: center;margin-top:5%">
 <img src="/public/nfl_draft.webp" width="45%">
 <img src="/public/nfl_draft.jpg" width="45%" style="margin-left:5%">
@@ -85,8 +85,8 @@ background-size: 90%
 ---
 # Software 2.0 (cont.)
 - 2.0 implies a replacement. 
-- I'm less sure of that. 
-- Certainly a different tool to have on your belt w/ radically different trade-offs.
+  - Meh... maybe?
+- Certainly a valuable tool (w/ its own trade-offs)
 
 
 ---
@@ -127,11 +127,11 @@ Ties into:
 
 | Person    | Height | Level of Fame | Basketball-ness | 
 | :--------: | :-------: | :-------: | :-------: | 
-| <img src="/public/common_profile_pic.jpg" width="100px">  | 8 | 10 | 3 |
-| <img src="/public/lebron_james.avif" width="100px"> | 6 | 0 | 10 |
-| <img src="/public/yoyo_ma.jpg" width="100px">   | 4 | 6 | 0 |
+| <img src="/public/common_profile_pic.jpg" width="100px">  | 6 | 0 | 3 |
+| <img src="/public/lebron_james.avif" width="100px"> | 9 | 10 | 10 |
+| <img src="/public/yoyo_ma.jpg" width="100px">   | 4 | 7 | 0 |
 
-- What are these dimensions?
+- <a href="https://projector.tensorflow.org/">What are these dimensions?</a>
 <style>
   img{
   /* text-align:center; */
@@ -150,18 +150,6 @@ What are these dimensions? Unfortunately, rarely end up this clear cut in terms 
 
 What range can they take? Lazily just put things on a 0-10 scale here. 
 -->
-
----
-layout: center
-image: text-center
-title: ENHANCE
----
-
-<div style="text-align:center">
-<span style="color:blue">ENHANCE!</span>
-
-https://projector.tensorflow.org/
-</div>
 
 ---
 layout: two-cols-header
@@ -213,3 +201,4 @@ backgroundSize: "75%"
 - There's an underlying structure to the universe that
     - Can be learned
     - Can be interpolated over
+    - Becomes easier to learn as we learn more

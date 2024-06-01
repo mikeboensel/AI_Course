@@ -30,15 +30,16 @@ A fair amount of these terms are themselves vague catch-alls.
 ---
 # In practice: AI is "the new hotness"
 - A way to juice your stock price. 
-- Mentions of AI during investor conference calls:
 <img src="/public/earning_call_ai_mentions.png" height="300px">
 
 ---
+layout: image-right
+image: /public/spellcheck.JPG
+backgroundSize: "85%"
 ---
 # A moving target
 - Basically, **a computer doing something useful and impressive**.
-- Ex: Spellcheck, probably revolutionary when initially released. Now, not so much.
-- <img src="/public/spellcheck.JPG" width="70%">
+- Ex: Spellcheck. Revolutionary at some point, now, not so much.
 
 <!--
 Simple enough algo:
@@ -57,6 +58,7 @@ Intentionally picked something that the audience would find trite to make a poin
 -->
 
 ---
+hide: True
 ---
 # Clarke's Law
 
@@ -69,6 +71,7 @@ Intentionally picked something that the audience would find trite to make a poin
 
 ---
 layout: center
+hide: true
 ---
 # Any tech, regardless of how advanced, becomes familiar and underappreciated with increasing use!
 <!-- I'd like to propose my own Law.
@@ -81,15 +84,13 @@ hide: true
 ---
 
 ---
-layout: center
 ---
 # We will focus on Machine Learning (ML)
-
-<!--
 - Main driver of recent progress
-- Best simple definition: 
-    - ### Learning an underlying structure from limited data examples
 
-Let's examine why this is interesting
+- Definition: **Learning an underlying structure from limited data examples**
+
+- Let's examine why this is interesting
+<!--
 
 -->
