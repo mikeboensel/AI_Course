@@ -561,51 +561,13 @@ Potential limiting factors:
 <!-- ::right::
 <img src="/public/you_need_a_budget.jpg" width="95%"> -->
 
----
----
-# The importance of Datasets
-- Collection/labeling of data is a very expensive endeavor
-- Even collection of "unlabeled data" is expensive
-    - Scraping, storage
-- Having readily available datasets for different domains facilitates research
-<div style="display:flex; justify-content: center;">
-<img src="/public/datasets/mnist_overview.jpg" width="35%">
-<img src="/public/datasets/imagenet_banner.jpg" width="35%">
-<img src="/public/datasets/the_pile.png" width="30%">
-
-</div>
-
----
-layout: image-right
-image: /public/elo_system.jpg
-backgroundSize: "90%"
----
-# What gets measured gets done
-- Competitions encourage regular progress
-- Contests around different datasets
-- Metrics can be hard! Accuracy used to be enough
-- Most of the progress recently has been in LLMs, more difficult to score/setup challenges
-    - Interesting approach from <a href="https://arena.lmsys.org/"> Chatbot arena</a> 
-    - ELO system and head to head contests
-
----
-layout: image-right
-image: /public/elo_system2.png
-backgroundSize: "100%"
----
-# Elo in detail
-- TLDR; Beat higher rated opponents, move up quickly
-
-
-<!-- Love a good inscrutable graph! It must be telling me something really important, let's stare at it until it gives up its secrets.
--->
 
 ---
 layout: image
 backgroundSize: "90%"
 ---
-# Valuable Resources
-
+# How to get started in Generative AI
+- <a href="https://chatgpt.com/">ChatGPT - Easy, low investment/high reward</a>
 - <a href="https://replicate.com/">"AI behind an API" - Replicate</a>
 - <a href="https://huggingface.co/">AI's Github - HuggingFaces</a>
 - <a href="https://civitai.com/models">Anything goes shitshow - Civit AI</a>
@@ -628,7 +590,6 @@ If you asked me for 2 book recommendations, I would recommend this one twice.
 # Future plans + my LinkedIn
 - Expanding outward towards the Generative AI stuff (specifically self-hosted stuff)
 - Every 3-4 weeks
-- More speakers ("How to clean/process a 100TB ML dataset")
 
 <div style="display:flex; justify-content: center;">
   <img src="/public/common_profile_pic.jpg" width="35%">
@@ -637,7 +598,14 @@ If you asked me for 2 book recommendations, I would recommend this one twice.
 
 ---
 layout: image-right
-image: 
+image: /public/meetup_group.jpg
+backgroundSize: "90%"
 ---
 # The Meetup Group
+<br>
+<br>
+<br>
+
+<img src="/public/meetup_qr_code.jpg" width="35%" style="margin-left:20%">
+
 https://www.meetup.com/boston-ai-ml-user-group/
