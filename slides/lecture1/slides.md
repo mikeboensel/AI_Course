@@ -41,8 +41,6 @@ Embedding viz: https://projector.tensorflow.org/
 -->
 
 
-
-
 ---
 src: ./pages/intro.md
 ---
@@ -81,10 +79,13 @@ image: /public/line_equation.jpg
 backgroundSize: "85%"
 ---
 # How?
+<v-clicks depth="3">
+
 - Remember lines from grade school math? That's 90% of what we're doing here. 
 - Seems too simple? 
   - **We're going to use a lot of them!**
 
+</v-clicks>
 ---
 ---
 # Core operations
@@ -92,98 +93,41 @@ backgroundSize: "85%"
 
 - Multiplication
 - Addition
-- 2 things that sound more complicated than they are:
+- 3 things that sound more complicated than they are:
   1. A non-linearity (aka `Activation f(x)`)
-  2. Calculus
+  2. High dimensionality
+  3. Calculus
 <img src="/public/calculus.webp" width="39%">
 </v-clicks>
-
----
----
-# Calculus simplified
-- Simple concepts, made hard
-- `"What if I have a wiggly line?"`
-- Advanced area finding 
-<div style="display:flex; justify-content: center;">
-<img src="/public/calculus/area-of-a-Trapezoid.png" width="39%">
-<img src="/public/calculus/riemann_sum_convergence.png" style="margin-left:30px" width="39%">
-</div>
-
----
----
-# Calculus simplified (cont.)
-- Advanced slope calculations
-<div style="display:flex; justify-content: center;">
-<img src="/public/calculus/grad_descent_slope_calculation.jpg" width="49%">
-<img src="/public/calculus/derivative.webp" style="margin-left:30px" width="49%">
-</div>
-
----
----
-# Why is this useful?
-Allows us to answer "How much of something?" and "How quickly is the amount changing?"
-<div style="display:flex; justify-content: center;">
-<img src="/public/calculus/rocket.jpg" width="49%">
-<img src="/public/calculus/integration_differentiation_usage.png" style="margin-left:30px" width="49%">
-</div>
-
----
-
-# Easy example
-<img src="/public/calculus/integration_example.png" width="149%">
-
-<!--
-- velocity * time =  distance traveled
-- slope of velocity = acceleration
--->
-
----
-layout: image-right
-image: /public/calculus/3D_Scatter_with_Colormap.png
-backgroundSize: "95%"
----
-# To infinity... and beyond!
-- We are limited to 3 dimensions, but math is not
-- Going to be using 100s of dimensions
-- Visualization is tough...
-- These don't have an easy interpretation all the time. 
-  - Somewhat mindbending
-
----
----
-# Basic math still works in high dimensional space!
-- Can't directly visualize (more on this later)
-- Trig distance/angle ideas still hold
-<img src="/public/calculus/pythagorean.png" width="60%">
-
-<!-- 
-Distance of 2 points, just the difference. 
-
-3 points = Triangle
-
-\>3 = Just extend triangle concept
--->
 
 ---
 layout: image-right
 image: /public/nn_linear_fitting.jpg
 backgroundSize: "95%"
 ---
-# Given data, we can fit lines!
-- What's a good fit?
-- Define a Loss Function
-- Adjust the line until we are happy
+# Let's talk about lines
+- Given data we can fit a line to it
+<img src="/public/line_equation.jpg" width="80%">
+<a href="https://www.desmos.com/calculator">Desmos Graphing</a>
+- What's a good fit? Something close to our data (define a Loss Function)
+  - Adjust the line until we are happy
+
+
+
+<!-- Our source of multiplications/additions
+-->
 
 ---
 layout: center
 hide: False
 ---
-# Great, but real life isn't a series of lines!
+# Great, but real life isn't a line! Its more complicated...
 
 ---
 ---
 # But it could be a series of small line segments (a piecewise function)
 <img src="/public/nn_non_linearity_2_fitting.JPG" width="75%">
+
 
 ---
 ---
@@ -215,6 +159,39 @@ def relu(input):
 # Traditional Stick and Ball diagram
 <img src="/public/nn_architecture_stick_and_ball.jpg" width="60%" style="margin-left:15%">
 
+
+
+---
+layout: image-right
+image: /public/calculus/3D_Scatter_with_Colormap.png
+backgroundSize: "95%"
+---
+# To infinity... and beyond!
+- We are limited to 3 dimensions, but math is not
+- Going to be using 100s of dimensions
+- Each dimension is easy to view, but all of them together... impossible
+  - <a href="https://www.desmos.com/3D">Desmos 3D Graphing</a>
+- Visualization is tough...
+- These don't have an easy interpretation all the time. 
+  - Somewhat mindbending
+
+---
+---
+# Basic math still works in high dimensional space!
+- Can't directly visualize (more on this later)
+- Trig distance/angle ideas still hold
+<img src="/public/calculus/pythagorean.png" width="60%">
+
+<!-- 
+Distance of 2 points, just the difference. 
+
+3 points = Triangle
+
+\>3 = Just extend triangle concept
+-->
+
+
+
 ---
 ---
 # Getting stronger now!
@@ -229,15 +206,6 @@ We can increase the Model's "Power" or "Capacity" by adding more parameters
   - Children
 -->
 
----
----
-# Model capacity
-- More line segments allow for more accurate following of the data
-- Deeper networks tend to be more efficient
-
-<img src="/public/nn_deeper_are_more_efficient.JPG" width="80%" style="margin-left:7%">
-
-
 
 ---
 ---
@@ -250,14 +218,17 @@ w_1 = .043
 # ... Great suffering later
 w_99012 = 3.30
 ```
+
 - A list? Better.
 ```python
 w = [1.1, .043,...,3.30]
 ```
+
 - List of lists => Matrix. Better still
 ```python
 w = [[1.1, .043,...,3.30], [6.54, ....]]
 ```
+
 - In practice, having these in source would be terrible, so we have serialized model files
 ```python
 model.load_state_dict(torch.load(PATH))
@@ -285,7 +256,6 @@ WTF is this?
 You'll see this term come up a lot. 
 
 The Wikipedia page is very dense.
-
 -->
 
 ---
@@ -388,13 +358,75 @@ Really important to remember when looking at these:
 All we know is our current weights losses + our current slope
 
 -->
+
+
+---
+layout: two-cols-header
+---
+# Calculus simplified
+
+Simple concepts are taught poorly. Seem hard. Just trying to answer a simple question.
+
+::left::
+<v-click at="+1">
+"Can you find the area?"
+<img src="/public/calculus/area-of-a-Trapezoid.png" width="100%">
+</v-click>
+
+::right::
+<v-click at="+2">
+"How about now with a wiggly line?"
+  <img src="/public/calculus/riemann_sum_convergence.png" width="75%" style="margin-left:15px">
+  </v-click>
+
+
+---
+layout: two-cols-header
+---
+# Calculus simplified (cont.)
+
+::left::
+<v-click at="+1">
+"Can you find the slope?"
+<img src="/public/calculus/grad_descent_slope_calculation.jpg" width="80%">
+</v-click>
+
+::right::
+<v-click at="+2">
+"How about now with a wiggly line?"
+<img src="/public/calculus/derivative.webp" style="margin-left:30px" width="100%">
+</v-click>
+
+
+---
+---
+# Why is this useful?
+Allows us to answer:
+- "How much is there?" 
+- "How quickly is that amount changing?"
+<div style="display:flex; justify-content: center;">
+<img src="/public/calculus/rocket.jpg" width="49%">
+<img src="/public/calculus/integration_differentiation_usage.png" style="margin-left:30px" width="49%">
+</div>
+
+---
+
+# Easy example
+<img src="/public/calculus/integration_example.png" width="149%">
+
+<!--
+- velocity * time =  distance traveled
+- slope of velocity = acceleration
+-->
+
+
 ---
 ---
 # Gradient Descent (in more detail)
 
 <div style="display:flex; justify-content: center;">
-<img src="/public/grad_descent/grad_descent_detailed.png" width="45%">
-<img src="/public/grad_descent/grad_descent_slope_calculation.JPG" width="45%" style="margin-left:20px">
+<img src="/public/grad_descent/grad_descent_detailed.png" width="53%">
+<!-- <img src="/public/grad_descent/grad_descent_slope_calculation.JPG" width="45%" style="margin-left:20px"> -->
 </div>
 
 ---
