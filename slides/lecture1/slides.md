@@ -44,7 +44,7 @@ Embedding viz: https://projector.tensorflow.org/
 ---
 src: ./pages/intro.md
 ---
-s
+sssssss
 
 ---
 src: ./pages/what_is_ai.md
@@ -87,18 +87,23 @@ backgroundSize: "85%"
 
 </v-clicks>
 ---
----
+
 # Core operations
 <v-clicks depth="3">
 
 - Multiplication
 - Addition
-- 3 things that sound more complicated than they are:
+- 4 things that sound more complicated than they are:
   1. A non-linearity (aka `Activation f(x)`)
   2. High dimensionality
-  3. Calculus
-<img src="/public/calculus.webp" width="39%">
+  3. Linear Algebra
+  4. Calculus
+<img src="/public/calculus.webp" width="30%">
 </v-clicks>
+
+<!--
+We'll break this all down + you'll feel comfortable with it by the end
+-->
 
 ---
 layout: image-right
@@ -208,7 +213,7 @@ We can increase the Model's "Power" or "Capacity" by adding more parameters
 
 
 ---
----
+
 # Matrices
 - As a programmer, how do you represent a bunch of variables?
 - Calling out each one? Nope
@@ -233,6 +238,10 @@ w = [[1.1, .043,...,3.30], [6.54, ....]]
 ```python
 model.load_state_dict(torch.load(PATH))
 ```
+
+<!--
+Didn't even bother to mention in our
+-->
 
 ---
 ---
@@ -259,7 +268,7 @@ The Wikipedia page is very dense.
 -->
 
 ---
----
+
 # Wow, lots of math... must be important
 Better learn what this is...
 
@@ -273,6 +282,8 @@ Better learn what this is...
 
 <!--
 Its a fancy word for a Matrix.
+
+Theme of the talk: This is easier/more accessible than you think. Just using a ton of jargon.
 -->
 
 ---
@@ -330,20 +341,22 @@ layout: image-right
 image: /public/grad_descent/smoothe_vs_non_smoothe.jpg
 backgroundSize: "95%"
 ---
+
 # Loss f(x) Landscape is likely complex
-- From https://www.telesens.co/loss-landscape-viz/viewer.html 
+- <a href="https://www.telesens.co/loss-landscape-viz/viewer.html">View more loss landscapes</a>
 
 <!--
+Loss landscape = How the Loss changes as we change our line segment fits
+
 Seeing several popular Models with their loss visualized relative to the weights.
 
 How? Thought this was thousands of dimensions? 
 - Dimensionality reduction techniques. Lose some stuff, but can keep the general idea.
-
 -->
 
 ---
 ---
-# Our beautiful, simple Loss Landscape 
+# Our dream Loss Landscape 
 - Nothing in the real world looks this nice and smoothe
 - We can perform Gradient Descent
   - AKA: Walking down the slope
@@ -368,13 +381,13 @@ layout: two-cols-header
 Simple concepts are taught poorly. Seem hard. Just trying to answer a simple question.
 
 ::left::
-<v-click at="+1">
+<v-click>
 "Can you find the area?"
 <img src="/public/calculus/area-of-a-Trapezoid.png" width="100%">
 </v-click>
 
 ::right::
-<v-click at="+2">
+<v-click>
 "How about now with a wiggly line?"
   <img src="/public/calculus/riemann_sum_convergence.png" width="75%" style="margin-left:15px">
   </v-click>
@@ -386,13 +399,13 @@ layout: two-cols-header
 # Calculus simplified (cont.)
 
 ::left::
-<v-click at="+1">
+<v-click>
 "Can you find the slope?"
 <img src="/public/calculus/grad_descent_slope_calculation.jpg" width="80%">
 </v-click>
 
 ::right::
-<v-click at="+2">
+<v-click>
 "How about now with a wiggly line?"
 <img src="/public/calculus/derivative.webp" style="margin-left:30px" width="100%">
 </v-click>
@@ -455,12 +468,16 @@ Allows us to answer:
 ---
 ---
 # Curse of dimensionality
-- All datasets is sparse at high dimensions
+- All data is sparse at high dimensions
 - Our toy graphs are not representative
 <img src="/public/curse_of_dimensionality.png" width="100%">
-- https://github.com/mikeboensel/AI_Course/blob/main/slides/lecture1/_notebooks/curse_of_dimensionality/dimensionality.ipynb
-- https://www.visiondummy.com/2014/04/curse-dimensionality-affect-classification/
 
+- <a href="https://www.visiondummy.com/2014/04/curse-dimensionality-affect-classification/">Illustrated with Puppies!</a>
+
+<!--
+https://github.com/mikeboensel/AI_Course/blob/main/slides/lecture1/_notebooks/curse_of_dimensionality/dimensionality.ipynb
+
+-->
 
 ---
 layout: image-right
@@ -484,7 +501,6 @@ backgroundSize: "90%"
 
 
 ---
-background: "/public/fermat_last_theorem.jpg"
 ---
 # Our toolbox
 <v-clicks depth="2">
@@ -493,11 +509,8 @@ background: "/public/fermat_last_theorem.jpg"
 | -------- | ------- |
 | <img src="/public/tools_python.png" width="30px" style="display:inline-block">`Python`  | Super popular, widely taught, very natural programming language. Huge library of useful stuff. Downside: slow!   |
 | <img src="/public/tools_numpy.avif" width="35px" style="display:inline-block"> | Highly optimized CPU-based math operations     |
-| <img src="/public/tools_pandas.svg" width="45px" style="display:inline-block"> pandas    | Data exploration    |
-| matplotlib    | Graphing    |
-| <img src="/public/tools_pytorch.png" width="45px" style="display:inline-block"> pytorch    | GPU based math operations, NN specifics, automatic gradient calculations (it handles our calculus!) |
-| Jupyter   | "Notebook" concept from laboratory,  More convenient than pure code |
-|  <img src="/public/tools_colab.png" width="65px" style="display:inline-block"> Google Colab     | Free hosted Jupyter    |
+| PyTorch    | GPU based math operations, NN specifics, automatic gradient calculations (it handles our calculus!) |
+| Jupyter   | "Notebook" concept from laboratory,  more convenient than pure code (Google Colab) |
 
 </v-clicks>
 
@@ -506,6 +519,7 @@ background: "/public/fermat_last_theorem.jpg"
 
 # MNIST w/ dense NN
 - https://github.com/mikeboensel/AI_Course/blob/main/slides/lecture1/_notebooks/mnist/mnist_pytorch.ipynb
+
 - <a href="https://adamharley.com/nn_vis/">Incredible visualizations of MNIST Model</a>
 
 <!-- NFL Draft modeling -- https://github.com/nflverse/nflverse-data/releases  https://www.pro-football-reference.com/draft/2002-combine.htm -->
@@ -611,6 +625,9 @@ If you asked me for 2 book recommendations, I would recommend this one twice.
   <img src="/public/qr_code_linked_in.png" width="35%" style="margin-left:20%">
 </div>
 
-<!--
+---
+layout: image-right
+image: 
+---
+# The Meetup Group
 https://www.meetup.com/boston-ai-ml-user-group/
--->

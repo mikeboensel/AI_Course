@@ -137,8 +137,8 @@ Fairly low paying/low skill job.
 <v-clicks depth="2">
 
 - Someone shows up with a 2 digit year `3/1/12`... 
-  - Are they 12? <img src="/public/12_year_old.webp" width="10%" style="display:inline-block">
-  - Or 112? <img src="/public/112_year_old.webp"  width="10%" style="display:inline-block">
+  - Are they 12? <img src="/public/12_year_old.webp" width="20%" style="display:inline-block; margin-left:5px">
+  - Are they 112? <img src="/public/112_year_old.webp"  width="20%" style="display:inline-block">
 
 - Not even touching on teenagers acting w/ malice...
 

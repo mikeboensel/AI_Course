@@ -102,9 +102,9 @@ hide: False
 </div>
 
 <!--
-Color space
-We can transition between points
-At every point we get a valid color
+Color space:
+- We can transition between points
+- At every point we get a valid color
 
 Ties into:
 - Latent spaces/embeddings
@@ -117,6 +117,7 @@ Ties into:
 # Interpolation Station
 - Even things that might not seem interpolatable
     - <a href="https://thispersondoesnotexist.com/">Human faces</a>
+    - https://thispersondoesnotexist.com/
     - Language concepts
     <img src="/public/king_queen_gender_vector.png" width="65%">
 
