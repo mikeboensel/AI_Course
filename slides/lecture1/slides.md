@@ -434,13 +434,17 @@ Allows us to answer:
 
 
 ---
----
+
 # Gradient Descent (in more detail)
 
 <div style="display:flex; justify-content: center;">
 <img src="/public/grad_descent/grad_descent_detailed.png" width="53%">
 <!-- <img src="/public/grad_descent/grad_descent_slope_calculation.JPG" width="45%" style="margin-left:20px"> -->
 </div>
+
+<!--
+Gradient - Just slope in many dimensions
+-->
 
 ---
 ---
@@ -484,12 +488,16 @@ layout: image-right
 image: /public/contortionist.jpg
 backgroundSize: "90%"
 ---
+
 # Model will contort itself
 - Just trying to hit all datapoints
 - Doesn't look so bad in our low-D graphs
 - Reality is its making these complex shapes based off very few examples relative to the overall space
 <img src="/public/underfit_overfit_tradeoff_reality.jpg" width="90%">
 
+<!--
+No loss signal for any points w/o data (and most places don't have data), so any shape is equally valid! Not good!
+-->
 
 ---
 ---
@@ -518,9 +526,11 @@ backgroundSize: "90%"
 ---
 
 # MNIST w/ dense NN
-- https://github.com/mikeboensel/AI_Course/blob/main/slides/lecture1/_notebooks/mnist/mnist_pytorch.ipynb
+- You've all been very patient, now we finally deliver on our <a href="https://adamharley.com/nn_vis/mlp/3d.html">promise</a>
 
-- <a href="https://adamharley.com/nn_vis/">Incredible visualizations of MNIST Model</a>
+- <a href="https://github.com/mikeboensel/AI_Course/blob/main/slides/lecture1/_notebooks/mnist/mnist_pytorch.ipynb">MNIST Notebook</a>
+
+
 
 <!-- NFL Draft modeling -- https://github.com/nflverse/nflverse-data/releases  https://www.pro-football-reference.com/draft/2002-combine.htm -->
 
