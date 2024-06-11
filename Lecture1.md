@@ -179,3 +179,5 @@ Graph - need to keep in mind what this represents (infinite resolution). Reality
 Over time some things `Drift`
 - Gravity - pretty constant
 - Housing prices - phase shift from 2007-> 2009
+
+https://playground.tensorflow.org/
