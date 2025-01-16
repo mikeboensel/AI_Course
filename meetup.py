@@ -1,66 +1,103 @@
-#  attendees= document.querySelectorAll('button[data-event-label="attendee-card"')
+# JS to run on the "Manage Attendees" page of a Meetup event
+#  attendees_dom= document.querySelectorAll('button[data-event-label="attendee-card"')
 
-#  var a = [];
-# for(i of attendees){
-#  a.push((i.querySelector('span')).textContent);
+#  var attendees_fullnames = [];
+# for(i of attendees_dom){
+#  attendees_fullnames.push((i.querySelector('p')).textContent);
 # }
-attendees = [
+
+# Populates the following array, we then break out first/last names via Python
+
+attendees_fullnames = [
     "Michael Boensel",
+    "Subham Swastik",
+    "Chris Rappoli",
+    "Andrew Ressler",
+    "tommy williams",
+    "Gabe Saxe",
+    "Abby Damodaran",
+    "arielle vargas",
+    "Jeff Levetin",
+    "Drew Nemer",
+    "Ujwalw Wasekar",
+    "Phillip Zhou",
+    "Brad Kaufman",
+    "Khush Patel",
+    "Stefania Mitova",
     "Suprateem Banerjee",
-    "Erik Pohl",
-    "Mark Sabalauskas",
-    "Kien Lang",
-    "XingxingShang",
-    "Dan Petrie",
-    "Dimitris Tselios",
-    "Steve Bernard",
-    "Martin Bakal",
-    "Richard Torres",
-    "Madhavan Munisamy",
-    "Kris Nybakken",
-    "Vishal Panchamia",
-    "Te Chen Chiu",
-    "Evelina Averin",
-    "Will Dzierson",
-    "Dimo Babenco",
-    "Travis  McGee",
-    "Sanchit Dass",
-    "Makarand Zende",
-    "Will Sergeant",
-    "Curt CurtR",
-    "Roys Güreli",
-    "Aleef Mahmud",
-    "Sridharan Gopal",
-    "Robert Zacharski",
-    "Fabio Lopez",
-    "Ramy Solanki",
-    "Justin Ho",
-    "Mileva Van Tuyl",
-    "casey dimascio",
-    "Uma Mahesh",
-    "Aditya Ponnada",
-    "Marianna Nakos",
-    "Thomas DeMeo",
-    "Sarath Chandra Oruganti",
-    "Daniel Vent",
-    "Connor Fitzgerald",
-    "Winston Li",
-    "Tejaswini Tanaji Chavan",
-    "Tianfang Xie",
-    "mohit manjaria",
-    "Leena Doultani ",
-    "yimei wen",
-    "saurabh shetty",
-    "Aditya Singh",
-    "Tae Hyun Kim",
-    "Adriana Beltran Andrade",
-    "Sergei Gourski",
-    "Yury Alkhazov",
-    "Kevin McElroy",
+    "Andy Braren",
+    "Jason Stillerman",
+    "Payal Nagaonkar",
+    "Mahesh Kasana",
+    "Cameron Fen",
+    "Gabriel Leal",
+    "Matt Carroll",
+    "Ralph Baker",
+    "Mel Fish",
+    "Al Cole",
+    "Besmira Elezi",
+    "Fong Wis",
+    "Quan Tran",
+    "Senthil Palanivelu",
+    "Altyn Murat",
+    "Yuxiao Wang",
+    "Sathwik Matcha",
+    "Cooper Reed",
+    "Lafcadio Flint",
+    "Bhushan Suwal",
+    "Jeffery Jacobs",
+    "Nikhileshwar Reddy Bommareddy",
+    "Arun Gona",
+    "Nick Yee",
+    "Sean Woodruff",
+    "David González",
+    "Zin Ma",
+    "Chunyee Leung",
+    "Takin Tadayon",
+    "Zahra Naghdi",
+    "Harshil Nandwani",
+    "chaoyi jiang",
+    "Naga harish k",
+    "Rakesh Kumar",
+    "Ari Roshko ",
+    "Eric Mariasis",
+    "Rajkumar Rajamanickam",
+    "Carissa Lacson",
+    "James Xue",
+    "Mark Bluemer",
+    "Srijha Kalyan",
+    "Gbolahan Alli",
+    "Piotr Cetner",
+    "Siddarth Karuppusamy",
+    "Craig Chamberlain",
+    "Sankalpa Kattel",
+    "Myo Thet Kyaw",
+    "Bryan Sierra",
+    "Padmaja Surendranath",
+    "Jessica Mejia",
+    "Harsha Sheshanna",
+    "Arsen Avanesian",
+    "Nithin Gowrav",
+    "Jen Looper",
+    "Jon Wolheim",
+    "Prithvi Prakash",
+    "Mahesh Acharya",
+    "Kavach Shah",
+    "Chirag Malhotra",
+    "Hadi Khalaf",
+    "Maggie Moran",
 ]
 
 # for i in attendees:
 #     print(i.split(" ")[0])
 
-for i in attendees:
+# First Names
+print("First Names:")
+for i in attendees_fullnames:
+    print(" ".join(i.split(" ")[0:1]))
+
+print("\n*************************")
+
+print("Last Names:")
+for i in attendees_fullnames:
     print(" ".join(i.split(" ")[1:]))
