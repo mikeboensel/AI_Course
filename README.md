@@ -7,3 +7,6 @@
     - Have to either trigger a page reflow in the top-level `slides.md` (via an error like adding a character to the page path or toggling the `hide` attribute)
     - Best to develop subpages/sections separately
         - Can bring up via: `npx slidev {markdown_file}`
+
+## Post Nov 2024
+- Kind of gave up on using `slidev`. Just making LibreOffice ones.
