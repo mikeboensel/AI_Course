@@ -1,0 +1,54 @@
+name: Trigger Webhook
+
+on:
+  workflow_dispatch:
+    inputs:
+      method:
+        description: 'HTTP Method'
+        required: false
+        default: 'GET'
+        type: choice
+        options:
+          - GET
+          - POST
+          - PUT
+          - PATCH
+          - DELETE
+
+jobs:
+  trigger-webhook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Webhook
+        env:
+          WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
+        run: |
+          if [ -z "$WEBHOOK_URL" ]; then
+            echo "Error: WEBHOOK_URL secret is not set"
+            exit 1
+          fi
+          
+          METHOD="${{ inputs.method }}"
+          
+          echo "Making $METHOD request to webhook URL..."
+          
+          if [ "$METHOD" = "GET" ]; then
+            curl -X GET "$WEBHOOK_URL" \
+              -H "Accept: application/json" \
+              -w "\nHTTP Status: %{http_code}\n" \
+              -v
+          else
+            curl -X "$METHOD" "$WEBHOOK_URL" \
+              -H "Content-Type: application/json" \
+              -H "Accept: application/json" \
+              -w "\nHTTP Status: %{http_code}\n" \
+              -v
+          fi
+          
+          if [ $? -eq 0 ]; then
+            echo "Webhook triggered successfully"
+          else
+            echo "Failed to trigger webhook"
+            exit 1
+          fi
+
