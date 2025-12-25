@@ -19,9 +19,19 @@ jobs:
   trigger-webhook:
     runs-on: ubuntu-latest
     steps:
+      - name: Get Runner IP Address
+        id: get-ip
+        run: |
+          echo "Fetching GitHub Actions runner public IP address..."
+          RUNNER_IP=$(curl -s https://api.ipify.org)
+          echo "Runner Public IP: $RUNNER_IP"
+          echo "ip=$RUNNER_IP" >> $GITHUB_OUTPUT
+          echo "::notice title=Runner IP::GitHub Actions runner IP address: $RUNNER_IP"
+      
       - name: Trigger Webhook
         env:
           WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
+          RUNNER_IP: ${{ steps.get-ip.outputs.ip }}
         run: |
           if [ -z "$WEBHOOK_URL" ]; then
             echo "Error: WEBHOOK_URL secret is not set"
@@ -30,23 +40,30 @@ jobs:
           
           METHOD="${{ inputs.method }}"
           
+          echo "=========================================="
+          echo "GitHub Actions Runner IP: $RUNNER_IP"
           echo "Making $METHOD request to webhook URL..."
+          echo "=========================================="
           
           if [ "$METHOD" = "GET" ]; then
             curl -X GET "$WEBHOOK_URL" \
               -H "Accept: application/json" \
+              -H "X-GitHub-Actions-Runner-IP: $RUNNER_IP" \
+              -H "User-Agent: GitHub-Actions-Webhook/1.0" \
               -w "\nHTTP Status: %{http_code}\n" \
               -v
           else
             curl -X "$METHOD" "$WEBHOOK_URL" \
               -H "Content-Type: application/json" \
               -H "Accept: application/json" \
+              -H "X-GitHub-Actions-Runner-IP: $RUNNER_IP" \
+              -H "User-Agent: GitHub-Actions-Webhook/1.0" \
               -w "\nHTTP Status: %{http_code}\n" \
               -v
           fi
           
           if [ $? -eq 0 ]; then
-            echo "Webhook triggered successfully"
+            echo "Webhook triggered successfully from IP: $RUNNER_IP"
           else
             echo "Failed to trigger webhook"
             exit 1
